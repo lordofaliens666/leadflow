@@ -1,0 +1,14 @@
+{
+  "name": "@leadflow/renderer",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "main": "src/index.tsx",
+  "types": "src/index.tsx",
+  "dependencies": {
+    "@leadflow/schema": "*"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0"
+  }
+}

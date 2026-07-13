@@ -1,0 +1,12 @@
+{
+  "name": "leadflow",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev:builder": "npm run dev --workspace=apps/builder",
+    "dev:api": "npm run dev --workspace=apps/api"
+  }
+}
