@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>InScreens — Test Client</title>
+<link rel="stylesheet" href="/shared/nav.css" />
+<link rel="stylesheet" href="/shared/components.css" />
+<link rel="stylesheet" href="client.css" />
+</head>
+<body>
+<nav class="app-nav">
+  <span class="brand">InScreens</span>
+  <a href="/dashboard/">Dashboard</a>
+  <a class="active" href="/test-client/">Test client</a>
+</nav>
+<header>
+  <h1>Test client <span class="tag">simulated device</span></h1>
+  <div class="controls">
+    <label for="profile-select">Client SDK version</label>
+    <select id="profile-select"></select>
+    <button id="refresh">Refresh</button>
+  </div>
+  <div id="diagnostics" class="diagnostics"></div>
+</header>
+
+<main>
+  <div class="phone-frame">
+    <div id="screen-root"></div>
+  </div>
+</main>
+
+<script type="module" src="client.js"></script>
+</body>
+</html>

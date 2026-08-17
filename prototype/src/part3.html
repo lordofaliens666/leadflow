@@ -1,0 +1,2074 @@
+<div class="app-shell">
+
+  <header class="topbar">
+    <div class="brand-mark">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="3" y="3" width="18" height="18" rx="6" stroke="currentColor" stroke-width="2"/>
+        <circle cx="16.5" cy="7.5" r="2.6" fill="#F2A93B"/>
+      </svg>
+      <span>InScreens</span>
+    </div>
+
+    <nav class="gate-nav" id="gate-nav">
+      <button class="step" data-page="home"><span class="num">1</span><span class="lbl-text">Главная</span></button>
+      <span class="dash"></span>
+      <button class="step" data-page="editor"><span class="num">2</span><span class="lbl-text">Симулятор</span></button>
+      <span class="dash"></span>
+      <button class="step" data-page="gate"><span class="num">3</span><span class="lbl-text">Gate-отчёт</span></button>
+      <span class="dash"></span>
+      <button class="step" data-page="publish"><span class="num">4</span><span class="lbl-text">Публикация</span></button>
+      <span class="dash"></span>
+      <button class="step" data-page="client"><span class="num">5</span><span class="lbl-text">Клиент</span></button>
+    </nav>
+
+    <div class="topbar-tools">
+      <div class="search">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <input id="search-input" type="text" placeholder="Искать шаблоны, экраны…" />
+      </div>
+      <div class="avatar">МК</div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============ PAGE 1 — HOME ============ -->
+    <section class="page active" id="page-home" data-page="home">
+      <div class="page-inner">
+
+        <div class="hero">
+          <div>
+            <h1>Что публикуем сегодня?</h1>
+            <p>Собирайте экраны и публикуйте их в приложении за минуты — без релиза и без разработчиков. Симулятор и gate-проверка страхуют от сюрпризов до того, как экран увидят пользователи.</p>
+          </div>
+          <div class="hero-actions">
+            <button class="btn btn-primary" data-goto="editor" data-needs-placement="1">+ Создать экран</button>
+          </div>
+        </div>
+
+        <div class="pill-row" style="margin:18px 0 8px;">
+          <button class="pill" data-goto="editor" data-template="blank" data-needs-placement="1">⬜ Пустой холст</button>
+          <button class="pill" data-goto="editor" data-template="promo" data-needs-placement="1">🏷 Промо-баннер</button>
+          <button class="pill" data-goto="editor" data-template="onboarding" data-needs-placement="1">✨ Онбординг</button>
+          <button class="pill" data-goto="editor" data-template="whatsnew" data-needs-placement="1">📣 Что нового</button>
+          <button class="pill" data-goto="editor" data-template="leadform" data-needs-placement="1">📝 Форма лида</button>
+        </div>
+
+        <div class="section">
+          <div class="section-head">
+            <h2>Шаблоны</h2>
+            <span class="hint">Готовые сценарии из раздела Use cases</span>
+          </div>
+          <div class="template-grid" id="template-grid">
+
+            <div class="card template-card" data-goto="editor" data-template="promo" data-needs-placement="1" data-search="промо баннер летняя распродажа акция">
+              <div class="template-thumb">
+                <div class="mini-banner"><div class="t">Летняя распродажа</div><div class="s">Скидки до 50%</div></div>
+                <div class="mini-row"><div class="mini-card"></div><div class="mini-card"></div><div class="mini-card"></div></div>
+                <div class="mini-btn">Смотреть всё</div>
+              </div>
+              <div class="template-meta"><span class="name">Промо-баннер</span><span class="tag">Промо</span></div>
+            </div>
+
+            <div class="card template-card" data-goto="editor" data-template="whatsnew" data-needs-placement="1" data-search="что нового анонс новости функции">
+              <div class="template-thumb">
+                <div class="mini-line" style="width:70%"></div>
+                <div class="mini-line" style="width:100%"></div>
+                <div class="mini-line" style="width:40%"></div>
+                <div class="mini-btn">Подробнее</div>
+              </div>
+              <div class="template-meta"><span class="name">Что нового</span><span class="tag">Контент</span></div>
+            </div>
+
+            <div class="card template-card" data-goto="editor" data-template="onboarding" data-needs-placement="1" data-search="онбординг знакомство первый запуск подсказка гайд тур по функциям">
+              <div class="template-thumb" style="align-items:center;text-align:center;">
+                <div style="display:flex;gap:4px;">
+                  <span style="width:5px;height:5px;border-radius:50%;background:var(--line);"></span>
+                  <span style="width:12px;height:5px;border-radius:3px;background:var(--brand);"></span>
+                  <span style="width:5px;height:5px;border-radius:50%;background:var(--line);"></span>
+                </div>
+                <div style="width:34px;height:34px;border-radius:50%;background:radial-gradient(circle at 35% 30%, var(--brand), var(--brand-strong));display:flex;align-items:center;justify-content:center;font-size:15px;margin-top:7px;">✨</div>
+                <div class="mini-line" style="width:70%;margin-top:7px;"></div>
+                <div class="mini-line" style="width:48%;"></div>
+                <div class="mini-btn" style="align-self:center;margin-top:3px;">Далее</div>
+              </div>
+              <div class="template-meta"><span class="name">Онбординг новой функции</span><span class="tag">Онбординг</span></div>
+            </div>
+
+            <div class="card template-card" data-goto="editor" data-template="leadform" data-needs-placement="1" data-search="форма лид контакты опрос">
+              <div class="template-thumb">
+                <div class="mini-line" style="width:60%"></div>
+                <div class="mini-form"><input disabled placeholder=""/><input disabled placeholder=""/></div>
+                <div class="mini-btn">Отправить</div>
+              </div>
+              <div class="template-meta"><span class="name">Форма лидогенерации</span><span class="tag">Лиды</span></div>
+            </div>
+
+            <div class="card template-card" data-goto="editor" data-template="abvariant" data-needs-placement="1" data-search="ab тест вариант эксперимент">
+              <div class="template-thumb">
+                <div class="mini-row">
+                  <div style="flex:1;display:flex;flex-direction:column;gap:5px;"><div class="mini-line"></div><div class="mini-line" style="width:70%"></div></div>
+                  <div style="flex:1;display:flex;flex-direction:column;gap:5px;"><div class="mini-line" style="background:var(--brand);border-color:var(--brand)"></div><div class="mini-line" style="width:70%"></div></div>
+                </div>
+                <div class="mini-btn" style="align-self:center;">A / B</div>
+              </div>
+              <div class="template-meta"><span class="name">A/B вариант экрана</span><span class="tag">Тест</span></div>
+            </div>
+
+            <div class="card template-card" data-goto="editor" data-template="seasonal" data-needs-placement="1" data-search="праздник сезон новый год распродажа">
+              <div class="template-thumb">
+                <div class="mini-banner" style="background:linear-gradient(135deg,var(--signal),var(--signal-ink));color:#fff;"><div class="t">С праздником!</div><div class="s">Только до 31 декабря</div></div>
+                <div class="mini-row"><div class="mini-card"></div><div class="mini-card"></div></div>
+              </div>
+              <div class="template-meta"><span class="name">Праздничный экран</span><span class="tag">Сезон</span></div>
+            </div>
+
+            <div class="card template-card" data-goto="editor" data-template="wheel" data-needs-placement="1" data-search="колесо фортуны рулетка спин игра геймификация">
+              <div class="template-thumb" style="align-items:center;justify-content:center;">
+                <div style="width:46px;height:46px;border-radius:50%;background:conic-gradient(var(--brand) 0deg 60deg, var(--signal) 60deg 120deg, var(--brand-strong) 120deg 180deg, var(--alert) 180deg 240deg, var(--signal-ink) 240deg 300deg, var(--brand) 300deg 360deg); box-shadow:0 4px 10px -4px rgba(0,0,0,.5);"></div>
+                <div class="mini-btn" style="margin-top:8px;">Крутить</div>
+              </div>
+              <div class="template-meta"><span class="name">Колесо фортуны</span><span class="tag">Геймификация</span></div>
+            </div>
+
+            <div class="card template-card" data-goto="editor" data-template="scratch" data-needs-placement="1" data-search="скретч карта стереть приз игра геймификация">
+              <div class="template-thumb" style="align-items:center;justify-content:center;">
+                <div style="width:100%;height:44px;border-radius:8px;background:repeating-linear-gradient(45deg, var(--surface) 0 4px, var(--surface-2) 4px 8px); display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:var(--text-faint);">Сотри приз</div>
+              </div>
+              <div class="template-meta"><span class="name">Скретч-карта</span><span class="tag">Геймификация</span></div>
+            </div>
+
+            <div class="card template-card" data-goto="editor" data-template="giftbox" data-needs-placement="1" data-search="мистери бокс подарок коробка игра геймификация">
+              <div class="template-thumb" style="align-items:center;justify-content:center;">
+                <div class="mini-row" style="gap:8px;">
+                  <div style="width:26px;height:26px;border-radius:7px;background:var(--surface-2);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:14px;">🎁</div>
+                  <div style="width:26px;height:26px;border-radius:7px;background:var(--surface-2);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:14px;">🎁</div>
+                  <div style="width:26px;height:26px;border-radius:7px;background:var(--surface-2);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:14px;">🎁</div>
+                </div>
+              </div>
+              <div class="template-meta"><span class="name">Мистери-боксы</span><span class="tag">Геймификация</span></div>
+            </div>
+
+            <div class="card template-card" data-goto="editor" data-template="blank" data-needs-placement="1" data-search="пустой холст с нуля">
+              <div class="template-thumb" style="align-items:center;">
+                <div style="width:34px;height:34px;border-radius:9px;border:1.6px dashed var(--text-faint);display:flex;align-items:center;justify-content:center;font-size:18px;color:var(--text-faint);">+</div>
+              </div>
+              <div class="template-meta"><span class="name">Пустой холст</span><span class="tag">С нуля</span></div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-head">
+            <h2>Ваши экраны</h2>
+            <span class="hint">3 экрана</span>
+          </div>
+          <div class="card screen-list">
+            <div class="screen-row" data-goto="editor" data-search="летняя распродажа">
+              <div class="thumb-mini"></div>
+              <div class="info"><div class="name">Летняя распродажа</div><div class="meta">Промо-баннер · обновлено сегодня</div></div>
+              <span class="chip chip-live">Опубликован · v1</span>
+            </div>
+            <div class="screen-row" data-goto="editor" data-search="тёмная тема что нового">
+              <div class="thumb-mini" style="background:linear-gradient(135deg,var(--ink),var(--text-faint));"></div>
+              <div class="info"><div class="name">Что нового: тёмная тема</div><div class="meta">Контентный экран · черновик</div></div>
+              <span class="chip chip-draft">Черновик</span>
+            </div>
+            <div class="screen-row" data-goto="editor" data-search="опрос удовлетворённости">
+              <div class="thumb-mini" style="background:linear-gradient(135deg,var(--signal),var(--signal-ink));"></div>
+              <div class="info"><div class="name">Опрос удовлетворённости</div><div class="meta">Форма · черновик</div></div>
+              <span class="chip chip-draft">Черновик</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ PAGE 2 — EDITOR / СИМУЛЯТОР ============ -->
+    <section class="page" id="page-editor" data-page="editor">
+      <div class="editor-top">
+        <input class="screen-name" value="Летняя распродажа" />
+        <div class="device-toggle">
+          <button class="is-active">iPhone 14</button>
+          <button>Pixel 7</button>
+        </div>
+        <div class="spacer"></div>
+        <button class="btn btn-ghost btn-sm">↺ Отменить</button>
+        <button class="btn btn-ghost btn-sm">↻ Повторить</button>
+        <button class="btn btn-primary" data-goto="gate">Далее: Тестирование →</button>
+      </div>
+
+      <div class="screens-rail" id="screens-rail"></div>
+
+      <div class="editor-layout">
+        <div class="rail">
+          <h3>Блоки</h3>
+          <div class="block-dropdown">
+            <button class="btn btn-primary btn-sm block-dropdown-trigger" id="add-block-btn" type="button">+ Добавить блок</button>
+            <div class="block-dropdown-menu" id="block-dropdown-menu" hidden>
+              <div class="block-menu-group">
+                <div class="block-menu-label">Промо</div>
+                <div class="block-item" data-block="banner"><span class="ico">▭</span>Баннер</div>
+                <div class="block-item" data-block="carousel"><span class="ico">▤</span>Карусель товаров<span class="new-badge">новое</span></div>
+              </div>
+              <div class="block-menu-group">
+                <div class="block-menu-label">Контент</div>
+                <div class="block-item" data-block="heading"><span class="ico">Aa</span>Заголовок</div>
+                <div class="block-item" data-block="text"><span class="ico">¶</span>Текст</div>
+                <div class="block-item" data-block="image"><span class="ico">▧</span>Изображение</div>
+              </div>
+              <div class="block-menu-group">
+                <div class="block-menu-label">Действия</div>
+                <div class="block-item" data-block="button"><span class="ico">⬤</span>Кнопка с действием</div>
+                <div class="block-item" data-block="form"><span class="ico">▥</span>Форма контактов</div>
+              </div>
+              <div class="block-menu-group">
+                <div class="block-menu-label">Спец-блоки</div>
+                <div class="block-item" data-block="timer"><span class="ico">◷</span>Таймер обратного отсчёта</div>
+                <div class="block-item" data-block="onboarding"><span class="ico">✨</span>Онбординг-шаг</div>
+              </div>
+              <div class="block-menu-group">
+                <div class="block-menu-label">Геймификация</div>
+                <div class="block-item" data-block="wheel"><span class="ico">🎡</span>Колесо фортуны<span class="new-badge">тренд</span></div>
+                <div class="block-item" data-block="scratch"><span class="ico">🎫</span>Скретч-карта</div>
+                <div class="block-item" data-block="giftbox"><span class="ico">🎁</span>Мистери-боксы</div>
+              </div>
+            </div>
+          </div>
+          <p class="hint" style="margin-top:14px;">Блоки на экране</p>
+          <div class="blocks-outline" id="blocks-outline"></div>
+          <p class="hint" style="margin-top:14px;">Перетаскивайте блоки на мокапе мышкой, чтобы менять порядок.</p>
+        </div>
+
+        <div class="canvas-wrap">
+          <div class="phone-frame">
+            <div class="notch"></div>
+            <div class="screen-surface" id="canvas" style="--preview-accent:#F2A93B;">
+              <!-- blocks injected by JS, pre-seeded below -->
+            </div>
+          </div>
+        </div>
+
+        <div class="rail right">
+          <div class="tabs">
+            <button class="is-active" data-tab="props">Свойства</button>
+            <button data-tab="brand">Брендкит</button>
+          </div>
+
+          <div class="prop-panel is-active" id="prop-panel" data-panel="props">
+            <p class="hint" id="prop-empty-hint" style="font-size:12.5px;color:var(--text-faint);">Выберите блок на экране, чтобы настроить его.</p>
+          </div>
+
+          <div class="prop-panel" id="brand-panel" data-panel="brand">
+            <div class="brandkit-block">
+              <h4>Логотип</h4>
+              <div class="logo-slot">+ Загрузить логотип</div>
+            </div>
+
+            <div class="brandkit-block">
+              <h4>Импорт бренда</h4>
+              <p class="hint">Загрузите файл — встроенный ИИ-инструмент определит цвета, шрифты и отступы и настроит параметры автоматически.</p>
+              <div class="import-row">
+                <button class="btn btn-ghost btn-sm" id="import-figma" type="button">🎨 Импорт из Figma</button>
+                <button class="btn btn-ghost btn-sm" id="import-brandbook" type="button">📄 Загрузить брендбук</button>
+              </div>
+              <input type="file" id="brandbook-file" accept=".pdf,.png,.jpg,.jpeg,.fig" hidden />
+              <div class="import-status" id="import-status" hidden></div>
+            </div>
+
+            <div class="brandkit-block">
+              <h4>Цвета</h4>
+              <div class="color-field">
+                <label>Основной</label>
+                <div class="color-input"><input type="color" id="bk-primary" value="#F2A93B"/><span class="hex-label" id="bk-primary-hex">#F2A93B</span></div>
+              </div>
+              <div class="color-field">
+                <label>Дополнительный</label>
+                <div class="color-input"><input type="color" id="bk-secondary" value="#1B8F7E"/><span class="hex-label" id="bk-secondary-hex">#1B8F7E</span></div>
+              </div>
+              <div class="color-field">
+                <label>Фон экрана</label>
+                <div class="color-input"><input type="color" id="bk-background" value="#101317"/><span class="hex-label" id="bk-background-hex">#101317</span></div>
+              </div>
+              <div class="color-field">
+                <label>Текст</label>
+                <div class="color-input"><input type="color" id="bk-text" value="#F1F2ED"/><span class="hex-label" id="bk-text-hex">#F1F2ED</span></div>
+              </div>
+            </div>
+
+            <div class="brandkit-block">
+              <h4>Элементы</h4>
+              <div class="field">
+                <label>Форма элементов</label>
+                <select id="bk-shape">
+                  <option value="pill">Скруглённая (pill)</option>
+                  <option value="soft">Мягкая</option>
+                  <option value="sharp">Строгая</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="brandkit-block">
+              <h4>Размеры и маржиналы</h4>
+              <div class="field">
+                <label>Отступы между блоками</label>
+                <div class="range-row"><input type="range" id="bk-spacing" min="8" max="28" value="12"/><span class="range-value" id="bk-spacing-value">12px</span></div>
+              </div>
+            </div>
+
+            <div class="brandkit-block">
+              <h4>Гайдлайны</h4>
+              <textarea id="bk-guidelines" rows="4" style="width:100%;border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:8px 10px;font-size:12.5px;color:var(--text);font-family:inherit;resize:vertical;">Не более двух акцентных цветов на экране.
+Логотип — не менее 24px в высоту.
+Заголовки — только шрифт Unbounded.</textarea>
+            </div>
+
+            <div class="brandkit-block">
+              <h4>Типографика</h4>
+              <div class="type-scale">
+                <div class="type-row"><span class="type-sample eyebrow-sample">Эксклюзивно</span><span class="type-meta">Eyebrow · Golos Text 700 · 11px</span></div>
+                <div class="type-row"><span class="type-sample" style="font-family:'Unbounded',sans-serif;font-weight:600;font-size:22px;">Заголовок H1</span><span class="type-meta">H1 · Unbounded 600 · 22px</span></div>
+                <div class="type-row"><span class="type-sample" style="font-weight:700;font-size:15px;">Заголовок H2</span><span class="type-meta">H2 · Golos Text 700 · 15px</span></div>
+                <div class="type-row"><span class="type-sample" style="font-weight:400;font-size:13px;">Основной текст</span><span class="type-meta">Body · Golos Text 400 · 13px</span></div>
+                <div class="type-row"><span class="type-sample mono" style="font-size:11px;">14 490 ₽</span><span class="type-meta">Цифры · Mono · 11px</span></div>
+              </div>
+              <div class="field" style="margin-top:12px;">
+                <label>Насыщенность заголовков</label>
+                <select id="bk-heading-weight">
+                  <option value="400">Обычная</option>
+                  <option value="700" selected>Полужирная</option>
+                </select>
+              </div>
+            </div>
+
+            <button class="btn btn-primary" id="apply-brand-btn" type="button">✨ Подстроить экран под бренд</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PAGE 3 — GATE REPORT ============ -->
+    <section class="page" id="page-gate" data-page="gate">
+      <div class="page-inner">
+
+        <div class="card gate-summary">
+          <div class="risk-figure warn">14%</div>
+          <div class="desc">
+            <h2>активных сессий увидят fallback вместо карусели</h2>
+            <p>Оценка построена на реальных данных о версиях SDK у ваших пользователей — не на предположении.</p>
+          </div>
+        </div>
+
+        <div class="gate-columns">
+
+          <div class="card journey">
+            <div class="section-head" style="margin-bottom:14px;">
+              <h2>Путь клиента</h2>
+              <span class="hint">Пройдите шаги как пользователь</span>
+            </div>
+            <div class="journey-steps" id="journey-steps"><!-- one step per screen, built by renderJourney() --></div>
+
+            <div class="phone-frame">
+              <div class="notch"></div>
+              <div class="screen-surface" id="journey-canvas" style="--preview-accent:#F2A93B;"></div>
+            </div>
+
+            <div class="journey-nav">
+              <button class="btn btn-ghost btn-sm" id="journey-back" disabled>← Назад</button>
+              <button class="btn btn-primary btn-sm" id="journey-next">Далее →</button>
+            </div>
+
+            <div class="pill-row" style="margin-top:18px;">
+              <span class="hint" style="align-self:center;margin-right:4px;">Профиль устройства:</span>
+              <button class="pill is-active" data-profile="current">SDK 2.0.0 · 56%</button>
+              <button class="pill" data-profile="stable">SDK 1.2.0 · 30%</button>
+              <button class="pill" data-profile="legacy">SDK 1.0.0 · 14%</button>
+            </div>
+            <div class="journey-status" id="journey-status">✓ Рендер актуальный — карусель поддерживается.</div>
+          </div>
+
+          <div>
+            <div class="card checklist">
+              <h2 style="font-size:14px;font-weight:700;margin-bottom:4px;">Проверки</h2>
+              <div id="checklist-body"></div>
+              <div class="check-row"><div class="check-icon ok">✓</div><div class="txt">Все ссылки в кнопках рабочие</div></div>
+              <div class="check-row"><div class="check-icon ok">✓</div><div class="txt">Brand-токены применены корректно</div></div>
+              <div class="check-row"><div class="check-icon ok">✓</div><div class="txt">Событие <span class="mono">screen_view</span> настроено</div></div>
+              <div class="check-row"><div class="check-icon ok">✓</div><div class="txt">Client SDK подключен и отвечает</div></div>
+            </div>
+
+            <div class="card" style="padding:18px 20px; margin-top:16px;">
+              <h2 style="font-size:14px;font-weight:700;">Матрица совместимости</h2>
+              <table class="matrix-table">
+                <thead><tr><th>Профиль</th><th>Доля</th><th>Результат</th></tr></thead>
+                <tbody id="matrix-body"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:flex;justify-content:flex-end;margin-top:24px;">
+          <button class="btn btn-primary" data-goto="publish">Далее: Публикация →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PAGE 4 — PUBLISH ============ -->
+    <section class="page" id="page-publish" data-page="publish">
+      <div class="page-inner">
+        <div class="publish-layout">
+
+          <div class="card publish-panel">
+            <div class="section-head" style="margin-bottom:0;"><h2>Настройки публикации</h2><span class="hint mono" id="publish-version">v2 · черновик</span></div>
+
+            <div class="field-row">
+              <div class="field">
+                <label>Аудитория</label>
+                <div class="pill-row">
+                  <button class="pill is-active">Все пользователи</button>
+                  <button class="pill">Сегмент…</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="field">
+              <label>Раскатка</label>
+              <div class="range-row">
+                <input type="range" id="rollout-range" min="0" max="100" value="100" />
+                <span class="range-value" id="rollout-value">100%</span>
+              </div>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label>Начало показа</label>
+                <input type="date" value="2026-08-01" />
+              </div>
+              <div class="field">
+                <label>Окончание показа</label>
+                <input type="date" value="2026-08-04" />
+              </div>
+            </div>
+
+            <div class="field">
+              <label>Комментарий к версии</label>
+              <textarea placeholder="Например: добавили карусель товаров, обновили баннер">Добавили карусель товаров, обновили акцентный цвет по брендкиту.</textarea>
+            </div>
+
+            <div>
+              <button class="btn btn-primary" id="publish-btn">Опубликовать</button>
+            </div>
+          </div>
+
+          <div>
+            <div class="card live-panel">
+              <div class="badgebar">
+                <span class="chip chip-live"><span class="pulse" style="width:1px;height:1px;display:inline-block;"></span>Live</span>
+              </div>
+              <div class="phone-frame" style="width:220px;">
+                <div class="notch"></div>
+                <div class="screen-surface" id="live-canvas" style="min-height:340px;--preview-accent:#F2A93B;"></div>
+              </div>
+              <div class="ts" id="live-ts">Обновлено: 30 июл, 14:02</div>
+
+              <div class="version-history">
+                <div class="version-row"><span class="v">v1</span><span class="meta">опубликовано 30 июл</span><span class="chip chip-live" style="font-size:10px;">live</span></div>
+                <div class="version-row" id="v2-row" style="display:none;"><span class="v">v2</span><span class="meta">опубликовано только что</span><span class="chip chip-live" style="font-size:10px;">live</span></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PAGE 5 — CLIENT DASHBOARD ============ -->
+    <section class="page" id="page-client" data-page="client">
+      <div class="page-inner">
+
+        <div class="client-header">
+          <h1>Летняя распродажа</h1>
+          <span class="chip chip-live">Live · v2</span>
+          <div class="spacer"></div>
+          <button class="btn btn-ghost" data-goto="editor">✎ Редактировать</button>
+        </div>
+
+        <div class="kpi-row">
+          <div class="card kpi-tile">
+            <div class="lbl">Показы</div>
+            <div class="val">18 420</div>
+            <div class="delta up">▲ 12% за 7 дней</div>
+          </div>
+          <div class="card kpi-tile">
+            <div class="lbl">Клики · CTR</div>
+            <div class="val">2 145 <span style="font-size:13px;color:var(--text-faint);">· 11.6%</span></div>
+            <div class="delta up">▲ 4% за 7 дней</div>
+          </div>
+          <div class="card kpi-tile">
+            <div class="lbl">Ошибок за 24ч</div>
+            <div class="val" style="color:var(--signal);">0</div>
+            <div class="delta flat">интеграция стабильна</div>
+          </div>
+          <div class="card kpi-tile">
+            <div class="lbl">Fallback-показов</div>
+            <div class="val">14%</div>
+            <div class="delta flat">прогноз gate совпал с фактом</div>
+          </div>
+        </div>
+
+        <div class="client-columns">
+          <div class="card trend-card">
+            <div class="head">
+              <h2>Показы за 7 дней</h2>
+              <span class="tot">итого 18 420</span>
+            </div>
+            <svg viewBox="0 0 560 160" width="100%" height="160" preserveAspectRatio="none" role="img" aria-label="Показы за 7 дней: рост с 1 780 до 3 260">
+              <defs>
+                <linearGradient id="trendFill" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#F2A93B" stop-opacity="0.35"/>
+                  <stop offset="100%" stop-color="#F2A93B" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <g stroke="var(--line)" stroke-width="1">
+                <line x1="0" y1="20" x2="560" y2="20"/>
+                <line x1="0" y1="70" x2="560" y2="70"/>
+                <line x1="0" y1="120" x2="560" y2="120"/>
+              </g>
+              <path d="M0,110 L80,96 L160,100 L240,78 L320,66 L400,50 L480,34 L560,20 L560,160 L0,160 Z" fill="url(#trendFill)"/>
+              <path d="M0,110 L80,96 L160,100 L240,78 L320,66 L400,50 L480,34 L560,20" fill="none" stroke="#F2A93B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="560" cy="20" r="4.5" fill="#F2A93B"/>
+            </svg>
+            <div style="display:flex;justify-content:space-between;font-size:10.5px;color:var(--text-faint);margin-top:4px;">
+              <span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="card breakdown-card">
+              <h2>По версии SDK</h2>
+              <div class="seg-bar">
+                <div class="seg" style="width:56%;background:var(--signal);"></div>
+                <div class="seg" style="width:30%;background:var(--signal);opacity:.6;"></div>
+                <div class="seg" style="width:14%;background:var(--alert);"></div>
+              </div>
+              <div class="seg-legend">
+                <div class="row"><span class="sw" style="background:var(--signal);"></span><span class="name">SDK 2.0.0 — рендер ок</span><span class="pct">56%</span></div>
+                <div class="row"><span class="sw" style="background:var(--signal);opacity:.6;"></span><span class="name">SDK 1.2.0 — рендер ок</span><span class="pct">30%</span></div>
+                <div class="row"><span class="sw" style="background:var(--alert);"></span><span class="name">SDK 1.0.0 — fallback</span><span class="pct">14%</span></div>
+              </div>
+              <div class="callout">✓ Compatibility Gate предсказал 14% — фактическое поведение пользователей подтвердило оценку.</div>
+            </div>
+
+            <div class="card health-log">
+              <h2>Журнал состояния</h2>
+              <div class="health-row"><span class="t">14:02</span><span>✓ Опубликована v2, раскатка 100%</span></div>
+              <div class="health-row"><span class="t">09:47</span><span>✓ SDK подтвердил доставку схемы всем активным клиентам</span></div>
+              <div class="health-row"><span class="t">08:15</span><span>✓ Ошибок рендера не обнаружено</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card funnel-card">
+          <div class="section-head" style="margin-bottom:2px;">
+            <h2 style="font-size:14px;font-weight:700;">Воронка по экранам</h2>
+            <span class="hint">Где отваливаются пользователи в последовательности</span>
+          </div>
+          <div id="funnel-body"></div>
+          <div class="funnel-summary" id="funnel-summary"></div>
+        </div>
+
+        <div class="card leads-card" id="leads-section">
+          <div class="section-head" style="margin-bottom:2px;">
+            <h2 style="font-size:14px;font-weight:700;">Собранные лиды <span class="hint mono" id="leads-count"></span></h2>
+            <button class="btn btn-ghost btn-sm" id="leads-export" type="button">⭳ Скачать CSV</button>
+          </div>
+          <p class="hint" id="leads-empty" hidden>Добавьте блок «Форма контактов» в Симуляторе, чтобы увидеть здесь собранные лиды.</p>
+          <div class="leads-table" id="leads-body"></div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<div class="modal-overlay" id="fallback-modal" hidden>
+  <div class="modal">
+    <h3>Fallback-макет</h3>
+    <p class="hint">Показывается вместо этого экрана на устройствах, где нужный компонент не поддерживается — вместо пустого или сломанного экрана.</p>
+    <div class="field"><label>Заголовок баннера</label><input id="fb-title"/></div>
+    <div class="field"><label>Подзаголовок баннера</label><input id="fb-subtitle"/></div>
+    <div class="field"><label>Текст</label><textarea id="fb-text"></textarea></div>
+    <div class="field"><label>Текст кнопки</label><input id="fb-cta"/></div>
+    <div class="modal-actions">
+      <button class="btn btn-ghost" id="fb-cancel">Отмена</button>
+      <button class="btn btn-primary" id="fb-save">Сохранить fallback</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="placement-modal" hidden>
+  <div class="modal placement-modal">
+    <h3>Куда вставить экран?</h3>
+    <p class="hint">Выберите место в приложении — так вы сразу увидите, как экран впишется. Список подтягивается из уже связанного приложения; можно уточнить и позже, на шаге «Публикация».</p>
+    <div class="placement-list" id="placement-list"></div>
+    <div class="modal-actions">
+      <button class="btn btn-ghost" id="placement-skip" type="button">Выбрать позже</button>
+      <button class="btn btn-primary" id="placement-continue" type="button">Продолжить</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- router ---------- */
+  var pages = document.querySelectorAll(".page");
+  var navSteps = document.querySelectorAll(".gate-nav .step");
+
+  function showPage(id){
+    pages.forEach(function(p){ p.classList.toggle("active", p.dataset.page === id); });
+    navSteps.forEach(function(s){ s.classList.toggle("is-current", s.dataset.page === id); });
+    window.scrollTo({top:0});
+    if(location.hash !== "#"+id) history.replaceState(null, "", "#"+id);
+    if(id === "gate"){ renderGatePage(); renderJourney(); }
+    if(id === "client"){ renderFunnel(); renderLeadsSection(); }
+  }
+
+  navSteps.forEach(function(s){
+    s.addEventListener("click", function(){ showPage(s.dataset.page); });
+  });
+  document.querySelectorAll("[data-goto]").forEach(function(el){
+    el.addEventListener("click", function(){
+      if(el.dataset.needsPlacement){
+        openPlacementModal(el.dataset.goto, el.dataset.template);
+        return;
+      }
+      if(el.dataset.template) loadTemplate(el.dataset.template);
+      showPage(el.dataset.goto);
+    });
+  });
+
+  /* ---------- toast ---------- */
+  var toastEl = document.getElementById("toast");
+  var toastTimer = null;
+  function toast(msg){
+    toastEl.textContent = msg;
+    toastEl.classList.add("show");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toastEl.classList.remove("show"); }, 2600);
+  }
+
+  /* ---------- home search filter ---------- */
+  var searchInput = document.getElementById("search-input");
+  searchInput.addEventListener("input", function(){
+    var q = searchInput.value.trim().toLowerCase();
+    document.querySelectorAll("#page-home [data-search]").forEach(function(el){
+      var match = !q || el.dataset.search.indexOf(q) !== -1;
+      el.style.display = match ? "" : "none";
+    });
+  });
+
+  /* ---------- home: placement picker (shown before creating a NEW screen) ----------
+     Mirrors what the SDK would report once the app is connected: each app screen
+     keeps its own naming, and already-used slots show what's currently published
+     there. Existing screens (in "Ваши экраны") skip this — only new-screen entry
+     points (CTA, quick actions, templates) carry data-needs-placement. */
+  var PLACEMENTS = [
+    { id:"home-banner", screen:"Главный экран приложения", slot:"Баннер сверху", meta:"Первый экран, который видят 100% пользователей", occupiedBy:"Летняя распродажа" },
+    { id:"catalog-between", screen:"Каталог", slot:"Между секциями категорий", meta:"Показывается при скролле каталога", occupiedBy:null },
+    { id:"cart-above-total", screen:"Корзина", slot:"Над итоговой суммой", meta:"Перед оформлением заказа", occupiedBy:null },
+    { id:"profile-card", screen:"Профиль", slot:"Карточка в начале экрана", meta:"Первое, что видно в профиле", occupiedBy:null },
+    { id:"checkout-before-pay", screen:"Оформление заказа", slot:"Перед кнопкой оплаты", meta:"Последний шаг перед оплатой", occupiedBy:null }
+  ];
+  var selectedPlacementId = null;
+  var pendingNav = null;
+
+  var placementModal = document.getElementById("placement-modal");
+  var placementList = document.getElementById("placement-list");
+
+  function renderPlacementList(){
+    placementList.innerHTML = "";
+    PLACEMENTS.forEach(function(p){
+      var card = document.createElement("div");
+      card.className = "placement-card" + (p.id === selectedPlacementId ? " is-selected" : "");
+      card.innerHTML = '<div class="screen-name">'+p.screen+'</div><div class="slot">'+p.slot+'</div><div class="meta">'+p.meta+'</div>'
+        + (p.occupiedBy ? '<span class="occupied">сейчас: '+p.occupiedBy+'</span>' : '');
+      card.addEventListener("click", function(){
+        selectedPlacementId = p.id;
+        renderPlacementList();
+      });
+      placementList.appendChild(card);
+    });
+  }
+  renderPlacementList();
+
+  function openPlacementModal(goto, template){
+    pendingNav = { goto: goto, template: template };
+    placementModal.hidden = false;
+  }
+  function finishPlacementFlow(){
+    placementModal.hidden = true;
+    if(!pendingNav) return;
+    if(pendingNav.template) loadTemplate(pendingNav.template);
+    showPage(pendingNav.goto);
+    var chosen = PLACEMENTS.find(function(p){ return p.id === selectedPlacementId; });
+    toast(chosen ? "Плейсмент выбран: " + chosen.screen + " — " + chosen.slot : "Плейсмент можно уточнить позже, на шаге «Публикация»");
+    pendingNav = null;
+  }
+  document.getElementById("placement-skip").addEventListener("click", function(){
+    selectedPlacementId = null;
+    finishPlacementFlow();
+  });
+  document.getElementById("placement-continue").addEventListener("click", finishPlacementFlow);
+
+  /* ---------- device/compatibility model (shared by editor + gate) ---------- */
+  var DEVICE_PROFILES = [
+    {id:"legacy",  label:"SDK 1.0.0 — legacy",  sdkVersion:"1.0.0", share:14},
+    {id:"stable",  label:"SDK 1.2.0 — stable",  sdkVersion:"1.2.0", share:30},
+    {id:"current", label:"SDK 2.0.0 — current", sdkVersion:"2.0.0", share:56}
+  ];
+  var CAPABILITY_MANIFEST = {
+    "1.0.0": ["banner","heading","text","image","button","form","timer","onboarding","wheel","scratch","giftbox"],
+    "1.2.0": ["banner","heading","text","image","button","form","timer","onboarding","carousel","wheel","scratch","giftbox"],
+    "2.0.0": ["banner","heading","text","image","button","form","timer","onboarding","carousel","wheel","scratch","giftbox"]
+  };
+
+  /* ---------- shared component renderer ---------- */
+  function obDefaults(props){
+    return Object.assign({
+      title: "Персональные подборки для вас",
+      subtitle: "Теперь мы показываем товары, которые точно вам понравятся",
+      step: 1, total: 3, cta: "Далее", showSkip: true, emoji: "✨"
+    }, props || {});
+  }
+
+  var BLOCK_LABELS = { banner:"Баннер", heading:"Заголовок", text:"Текст", image:"Изображение", button:"Кнопка", carousel:"Карусель товаров", form:"Форма контактов", timer:"Таймер", onboarding:"Онбординг-шаг", wheel:"Колесо фортуны", scratch:"Скретч-карта", giftbox:"Мистери-боксы" };
+
+  // Mock inventory standing in for screens the SDK would report from the host
+  // app itself, once configured — not required to be real for this prototype.
+  var NATIVE_SCREENS = [
+    {id:"home", name:"Главный экран приложения"},
+    {id:"catalog", name:"Каталог"},
+    {id:"cart", name:"Корзина"},
+    {id:"profile", name:"Профиль"},
+    {id:"checkout", name:"Оформление заказа"}
+  ];
+
+  function actionSummary(action){
+    if(!action) return "";
+    if(action.type === "link") return "→ "+(action.link || "ссылка");
+    if(action.type === "screen"){
+      if(!action.target) return "→ (не выбран экран)";
+      var parts = action.target.split(":");
+      if(parts[0] === "native"){
+        var n = NATIVE_SCREENS.find(function(x){ return x.id === parts[1]; });
+        return n ? "→ 📱 «"+n.name+"»" : "→ (нативный экран удалён)";
+      }
+      var s = screens.find(function(x){ return x.id === parts[1]; });
+      return s ? "→ «"+s.name+"»" : "→ (экран удалён)";
+    }
+    if(action.type === "message") return "💬 «"+(action.message || "сообщение")+"»";
+    if(action.type === "close") return "✕ закрыть окно";
+    return "";
+  }
+
+  function actionFieldsHTML(prefix, action){
+    var opts = [
+      {v:"link", l:"Открыть ссылку"},
+      {v:"screen", l:"Перейти на экран"},
+      {v:"message", l:"Показать сообщение"},
+      {v:"close", l:"Закрыть окно"}
+    ];
+    var html = '<div class="field"><label>Действие</label><select data-bind="'+prefix+'-type">'
+      + opts.map(function(o){ return '<option value="'+o.v+'"'+(action.type===o.v?' selected':'')+'>'+o.l+'</option>'; }).join("")
+      + '</select></div>';
+    if(action.type === "link"){
+      html += '<div class="field"><label>Ссылка</label><input placeholder="https://" data-bind="'+prefix+'-link" value="'+(action.link||"myapp://catalog")+'"/></div>';
+    } else if(action.type === "screen"){
+      html += '<div class="field"><label>Экран назначения</label><select data-bind="'+prefix+'-screen">'
+        + '<option value="">— выберите экран —</option>'
+        + '<optgroup label="Экраны InScreens">'
+        + screens.map(function(s,i){ return '<option value="screen:'+s.id+'"'+(action.target==="screen:"+s.id?' selected':'')+'>'+(i+1)+'. '+s.name+'</option>'; }).join("")
+        + '</optgroup>'
+        + '<optgroup label="Нативные экраны приложения">'
+        + NATIVE_SCREENS.map(function(n){ return '<option value="native:'+n.id+'"'+(action.target==="native:"+n.id?' selected':'')+'>'+n.name+'</option>'; }).join("")
+        + '</optgroup>'
+        + '</select></div>'
+        + '<p class="hint" style="margin-top:-6px;">Нативные экраны подтягиваются автоматически при настройке SDK — список пока условный.</p>';
+    } else if(action.type === "message"){
+      html += '<div class="field"><label>Текст сообщения</label><input data-bind="'+prefix+'-message" value="'+(action.message||"Готово!")+'"/></div>';
+    }
+    return html;
+  }
+
+  function bindActionFields(prefix, getAction){
+    var typeSel = propPanel.querySelector('[data-bind="'+prefix+'-type"]');
+    if(!typeSel) return;
+    typeSel.addEventListener("change", function(){
+      var a = getAction();
+      a.type = typeSel.value;
+      renderCanvas();
+    });
+    var linkInput = propPanel.querySelector('[data-bind="'+prefix+'-link"]');
+    if(linkInput) linkInput.addEventListener("change", function(){ getAction().link = linkInput.value; renderCanvas(); });
+    var screenSel = propPanel.querySelector('[data-bind="'+prefix+'-screen"]');
+    if(screenSel) screenSel.addEventListener("change", function(){ getAction().target = screenSel.value; renderCanvas(); });
+    var msgInput = propPanel.querySelector('[data-bind="'+prefix+'-message"]');
+    if(msgInput) msgInput.addEventListener("change", function(){ getAction().message = msgInput.value; renderCanvas(); });
+  }
+
+  function buildOnboardingHTML(op){
+    var dots = "";
+    for (var i=1;i<=op.total;i++){ dots += '<span class="d'+(i===op.step?' is-active':'')+'"></span>'; }
+    return '<div class="dots">'+dots+'</div>'
+      + '<div class="illus">'+op.emoji+'</div>'
+      + '<div class="headline">'+op.title+'</div>'
+      + '<div class="sub">'+op.subtitle+'</div>'
+      + '<div class="actions">'
+      + (op.showSkip ? '<button class="skip" type="button">Пропустить</button>' : '<span></span>')
+      + '<button class="next" type="button">'+op.cta+'</button>'
+      + '</div>'
+      + '<div class="step-lbl">'+op.step+' / '+op.total+'</div>'
+      + '<div class="ob-actions-summary">'
+      +   '<span>Далее '+actionSummary(op.nextAction)+'</span>'
+      +   (op.showSkip ? '<span>Пропустить '+actionSummary(op.skipAction)+'</span>' : '')
+      + '</div>';
+  }
+
+  function materializeProps(type, props){
+    if(type === "onboarding"){
+      var op = obDefaults(props);
+      if(!op.nextAction) op.nextAction = {type:"screen", target:null};
+      if(!op.skipAction) op.skipAction = {type:"message", message:"Онбординг пропущен"};
+      return op;
+    }
+    if(type === "button"){
+      var bp = Object.assign({text:"Смотреть всё"}, props||{});
+      if(!bp.action) bp.action = {type:"link", link:"myapp://catalog"};
+      return bp;
+    }
+    if(type === "banner"){
+      return Object.assign({title:"Летняя распродажа", subtitle:"Скидки до 50% — только 3 дня"}, props||{});
+    }
+    if(type === "wheel"){
+      return Object.assign({ title:"Крути и выигрывай!", prizes:["-10%","Приз!","-20%","Ещё раз","Подарок","-5%"], cta:"Крутить" }, props||{});
+    }
+    if(type === "scratch"){
+      return Object.assign({ prize:"Скидка 20%", hint:"Проведите пальцем, чтобы стереть" }, props||{});
+    }
+    if(type === "giftbox"){
+      return Object.assign({ title:"Выберите подарок", prizes:["Скидка 15%","Попробуй ещё раз","Бесплатная доставка"] }, props||{});
+    }
+    if(type === "form"){
+      return Object.assign({ fields:["Имя","Телефон"], cta:"Отправить", successMessage:"Спасибо! Мы свяжемся с вами." }, props||{});
+    }
+    return Object.assign({}, props||{});
+  }
+
+  function escapeHtml(s){
+    return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+  }
+
+  // Builds a real labeled pie-slice wheel (not a decorative conic-gradient) so
+  // spin results can land on an actual, readable segment.
+  function buildWheelSVG(prizes, colors){
+    var n = prizes.length;
+    var r = 90, cx = 100, cy = 100;
+    var parts = [];
+    for (var i=0; i<n; i++){
+      var a0 = (360/n)*i - 90;
+      var a1 = (360/n)*(i+1) - 90;
+      var x0 = cx + r*Math.cos(a0*Math.PI/180), y0 = cy + r*Math.sin(a0*Math.PI/180);
+      var x1 = cx + r*Math.cos(a1*Math.PI/180), y1 = cy + r*Math.sin(a1*Math.PI/180);
+      var largeArc = (a1 - a0) > 180 ? 1 : 0;
+      var fill = colors[i % colors.length];
+      parts.push('<path d="M'+cx+','+cy+' L'+x0.toFixed(2)+','+y0.toFixed(2)+' A'+r+','+r+' 0 '+largeArc+' 1 '+x1.toFixed(2)+','+y1.toFixed(2)+' Z" fill="'+fill+'"/>');
+      var mid = (a0 + a1)/2;
+      var lx = cx + (r*0.6)*Math.cos(mid*Math.PI/180);
+      var ly = cy + (r*0.6)*Math.sin(mid*Math.PI/180);
+      parts.push('<text x="'+lx.toFixed(2)+'" y="'+ly.toFixed(2)+'" font-size="10" font-weight="700" fill="#fff" text-anchor="middle" dominant-baseline="middle" transform="rotate('+(mid+90).toFixed(2)+' '+lx.toFixed(2)+' '+ly.toFixed(2)+')">'+escapeHtml(prizes[i])+'</text>');
+    }
+    return '<svg viewBox="0 0 200 200" width="150" height="150">'+parts.join("")+'<circle cx="100" cy="100" r="16" fill="#15181C"/></svg>';
+  }
+
+  // Real scratch-to-reveal: an opaque canvas sits over the prize text; erasing
+  // with the pointer (globalCompositeOperation destination-out) reveals it.
+  function setupScratchCanvas(canvas){
+    if(!canvas) return;
+    var ctx = canvas.getContext("2d");
+    var w = canvas.width, h = canvas.height;
+    ctx.fillStyle = "#B9C0CC";
+    ctx.fillRect(0, 0, w, h);
+    ctx.fillStyle = "#5B6472";
+    ctx.font = "700 13px sans-serif";
+    ctx.textAlign = "center";
+    ctx.fillText("Стереть, чтобы узнать приз", w/2, h/2 + 4);
+    ctx.globalCompositeOperation = "destination-out";
+
+    var scratching = false;
+    function pos(ev){
+      var rect = canvas.getBoundingClientRect();
+      var px = ev.clientX - rect.left;
+      var py = ev.clientY - rect.top;
+      return { x: px * (canvas.width/rect.width), y: py * (canvas.height/rect.height) };
+    }
+    function scratchAt(p){
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, 16, 0, Math.PI*2);
+      ctx.fill();
+    }
+    function checkCleared(){
+      var data = ctx.getImageData(0, 0, w, h).data;
+      var cleared = 0, sampled = 0;
+      for (var i=3; i<data.length; i += 4*10){ sampled++; if(data[i] === 0) cleared++; }
+      if(sampled && cleared/sampled > 0.5){
+        canvas.style.transition = "opacity .4s ease";
+        canvas.style.opacity = "0";
+        canvas.style.pointerEvents = "none";
+      }
+    }
+    canvas.addEventListener("pointerdown", function(ev){ ev.stopPropagation(); scratching = true; scratchAt(pos(ev)); });
+    canvas.addEventListener("pointermove", function(ev){ if(scratching){ ev.stopPropagation(); scratchAt(pos(ev)); } });
+    window.addEventListener("pointerup", function(){ if(scratching){ scratching = false; checkCleared(); } });
+  }
+
+  // Renders a block from props only — used for the editor canvas, the gate-page
+  // journey preview, and the publish live preview. Never mutates the model.
+  function renderBlock(type, props){
+    props = props || {};
+    var el = document.createElement("div");
+    el.className = "comp comp-" + type;
+    el.dataset.type = type;
+    if(type === "banner"){
+      el.innerHTML = '<div class="title">'+(props.title||"Заголовок баннера")+'</div><div class="subtitle">'+(props.subtitle||"Подзаголовок")+'</div>';
+    } else if(type === "heading"){
+      el.textContent = props.text || "Заголовок";
+    } else if(type === "text"){
+      el.textContent = props.text || "Текстовый блок с описанием.";
+    } else if(type === "image"){
+      el.textContent = "Изображение";
+    } else if(type === "button"){
+      el.innerHTML = '<span class="btn-visual">'+(props.text||"Смотреть всё")+'</span>'
+        + '<span class="action-chip">'+actionSummary(props.action)+'</span>';
+    } else if(type === "carousel"){
+      var items = props.items || [{l:"Кроссовки",p:"3 990 ₽"},{l:"Куртка",p:"7 490 ₽"},{l:"Рюкзак",p:"2 290 ₽"}];
+      el.innerHTML = items.map(function(it){ return '<div class="c-card"><div class="lbl">'+it.l+'</div><div class="price">'+it.p+'</div></div>'; }).join("");
+    } else if(type === "form"){
+      var formFields = props.fields && props.fields.length ? props.fields : ["Имя","Телефон"];
+      el.innerHTML =
+        '<div class="form-fields">'+formFields.map(function(f){ return '<input type="text" placeholder="'+escapeHtml(f)+'"/>'; }).join("")+'</div>'
+        + '<button class="form-submit" type="button">'+escapeHtml(props.cta||"Отправить")+'</button>'
+        + '<div class="form-success" hidden>✓ '+escapeHtml(props.successMessage||"Спасибо! Мы свяжемся с вами.")+'</div>';
+      (function(){
+        var submitBtn = el.querySelector(".form-submit");
+        var successEl = el.querySelector(".form-success");
+        var fieldsWrap = el.querySelector(".form-fields");
+        submitBtn.addEventListener("click", function(ev){
+          ev.stopPropagation();
+          var inputs = el.querySelectorAll(".form-fields input");
+          var allFilled = Array.from(inputs).every(function(i){ return i.value.trim().length > 0; });
+          inputs.forEach(function(i){ i.classList.toggle("has-error", !i.value.trim()); });
+          if(!allFilled) return;
+
+          var lead = {};
+          formFields.forEach(function(f, idx){ lead[f] = inputs[idx].value.trim(); });
+          lead._ts = new Date();
+          lead._captured = true;
+          capturedLeads.unshift(lead);
+          renderLeadsSection();
+
+          fieldsWrap.style.display = "none";
+          submitBtn.style.display = "none";
+          successEl.hidden = false;
+        });
+        el.querySelectorAll(".form-fields input").forEach(function(inp){
+          inp.addEventListener("input", function(){ inp.classList.remove("has-error"); });
+        });
+      })();
+    } else if(type === "timer"){
+      el.innerHTML = ['00','12','45'].map(function(v,i){ return '<div class="unit"><b>'+v+'</b><small>'+["дн","час","мин"][i]+'</small></div>'; }).join("");
+    } else if(type === "onboarding"){
+      el.innerHTML = buildOnboardingHTML(props);
+    } else if(type === "wheel"){
+      var prizes = props.prizes && props.prizes.length ? props.prizes : ["-10%","Приз!","-20%","Ещё раз","Подарок","-5%"];
+      var wheelColors = ["var(--preview-accent,var(--brand))", "var(--preview-secondary,var(--brand-strong))"];
+      el.innerHTML =
+        '<div class="wheel-title">'+escapeHtml(props.title||"Крути и выигрывай!")+'</div>'
+        + '<div class="wheel-wrap"><div class="wheel-pointer">▼</div><div class="wheel-dial">'+buildWheelSVG(prizes, wheelColors)+'</div></div>'
+        + '<button class="wheel-spin" type="button">'+escapeHtml(props.cta||"Крутить")+'</button>'
+        + '<div class="wheel-result"></div>';
+      (function(){
+        var dial = el.querySelector(".wheel-dial");
+        var spinBtn = el.querySelector(".wheel-spin");
+        var resultEl = el.querySelector(".wheel-result");
+        var turns = 0;
+        spinBtn.addEventListener("click", function(ev){
+          ev.stopPropagation();
+          turns++;
+          var n = prizes.length;
+          var idx = Math.floor(Math.random()*n);
+          var segAngle = 360/n;
+          var landAngle = turns*360*3 + (360 - (idx*segAngle + segAngle/2));
+          dial.style.transform = "rotate("+landAngle+"deg)";
+          resultEl.textContent = "";
+          spinBtn.disabled = true;
+          setTimeout(function(){
+            resultEl.textContent = "🎉 Выпало: " + prizes[idx];
+            spinBtn.disabled = false;
+          }, 3200);
+        });
+      })();
+    } else if(type === "scratch"){
+      el.innerHTML =
+        '<div class="scratch-wrap"><div class="scratch-prize">🎁 '+escapeHtml(props.prize||"Скидка 20%")+'</div><canvas class="scratch-canvas" width="260" height="110"></canvas></div>'
+        + '<div class="scratch-hint">'+escapeHtml(props.hint||"Проведите пальцем, чтобы стереть")+'</div>';
+      setupScratchCanvas(el.querySelector(".scratch-canvas"));
+    } else if(type === "giftbox"){
+      var boxPrizes = props.prizes && props.prizes.length ? props.prizes : ["Скидка 15%","Попробуй ещё раз","Бесплатная доставка"];
+      el.innerHTML =
+        '<div class="giftbox-title">'+escapeHtml(props.title||"Выберите подарок")+'</div>'
+        + '<div class="giftbox-row">'+boxPrizes.map(function(p,i){ return '<button class="giftbox-item" type="button" data-i="'+i+'">🎁</button>'; }).join("")+'</div>'
+        + '<div class="giftbox-result"></div>';
+      (function(){
+        var opened = false;
+        var resultEl = el.querySelector(".giftbox-result");
+        el.querySelectorAll(".giftbox-item").forEach(function(btn){
+          btn.addEventListener("click", function(ev){
+            ev.stopPropagation();
+            if(opened) return;
+            opened = true;
+            var i = Number(btn.dataset.i);
+            btn.textContent = "🎉";
+            btn.classList.add("is-opened");
+            el.querySelectorAll(".giftbox-item").forEach(function(b){ if(b !== btn) b.disabled = true; });
+            resultEl.innerHTML = 'Ваш приз: <b>'+escapeHtml(boxPrizes[i])+'</b> · <button class="giftbox-replay" type="button">Играть снова</button>';
+            resultEl.querySelector(".giftbox-replay").addEventListener("click", function(ev2){
+              ev2.stopPropagation();
+              opened = false;
+              el.querySelectorAll(".giftbox-item").forEach(function(b){ b.disabled = false; b.textContent = "🎁"; b.classList.remove("is-opened"); });
+              resultEl.innerHTML = "";
+            });
+          });
+        });
+      })();
+    }
+    return el;
+  }
+
+  function defaultFallback(screen){
+    var bannerBlock = screen && screen.blocks.find(function(b){ return b.type === "banner"; });
+    return {
+      title: bannerBlock ? bannerBlock.props.title : (screen ? screen.name : "Экран"),
+      subtitle: bannerBlock ? bannerBlock.props.subtitle : "",
+      text: "Смотрите актуальную информацию в приложении.",
+      cta: "Понятно"
+    };
+  }
+
+  /* ---------- screens model (a sequence of editable screens) ---------- */
+  var screens = [];
+  var capturedLeads = []; // real submissions from the "form" block's live submit handler
+  var activeScreenIndex = 0;
+  var selectedBlockId = null;
+  var blockIdCounter = 1;
+  var screenIdCounter = 1;
+  var brandAccent = "#F2A93B";
+
+  var canvas = document.getElementById("canvas");
+  var propPanel = document.getElementById("prop-panel");
+  var screensRail = document.getElementById("screens-rail");
+  var screenNameInput = document.querySelector(".screen-name");
+
+  function getActiveBlock(id){
+    return screens[activeScreenIndex].blocks.find(function(b){ return b.id === id; });
+  }
+
+  // Real mouse-driven dragging (pointer events) rather than native HTML5 DnD —
+  // the block visibly follows the cursor and other blocks show the drop target.
+  function attachBlockHandlers(el, id){
+    el.addEventListener("click", function(ev){ ev.stopPropagation(); selectBlockId(id); });
+    el.addEventListener("pointerdown", function(ev){
+      if(ev.target.closest("button, input, select, textarea, a, canvas")) return;
+      if(ev.button !== 0) return;
+      ev.preventDefault();
+      var startY = ev.clientY;
+      var overId = null;
+      el.classList.add("is-dragging");
+      try{ el.setPointerCapture(ev.pointerId); }catch(e){}
+
+      function onMove(ev2){
+        var dy = ev2.clientY - startY;
+        el.style.transform = "translateY(" + dy + "px)";
+        var found = null;
+        Array.from(canvas.children).forEach(function(sib){
+          if(sib === el) return;
+          var r = sib.getBoundingClientRect();
+          if(ev2.clientY > r.top && ev2.clientY < r.bottom) found = sib;
+        });
+        canvas.querySelectorAll(".comp").forEach(function(c){ if(c!==el) c.classList.remove("drag-over"); });
+        if(found) found.classList.add("drag-over");
+        overId = found ? found.dataset.id : null;
+      }
+      function onUp(){
+        document.removeEventListener("pointermove", onMove);
+        document.removeEventListener("pointerup", onUp);
+        el.style.transform = "";
+        el.classList.remove("is-dragging");
+        canvas.querySelectorAll(".comp").forEach(function(c){ c.classList.remove("drag-over"); });
+        if(overId && overId !== id) reorderBlocks(id, overId);
+      }
+      document.addEventListener("pointermove", onMove);
+      document.addEventListener("pointerup", onUp);
+    });
+  }
+
+  function reorderBlocks(fromId, toId){
+    var blocks = screens[activeScreenIndex].blocks;
+    var fromIdx = blocks.findIndex(function(b){ return b.id === fromId; });
+    var toIdx = blocks.findIndex(function(b){ return b.id === toId; });
+    if(fromIdx < 0 || toIdx < 0) return;
+    var moved = blocks.splice(fromIdx, 1)[0];
+    blocks.splice(toIdx, 0, moved);
+    renderCanvas();
+    toast("Порядок блоков обновлён");
+  }
+
+  var BLOCK_ICONS = { banner:"▭", heading:"Aa", text:"¶", image:"▧", carousel:"▤", button:"⬤", form:"▥", timer:"◷", onboarding:"✨", wheel:"🎡", scratch:"🎫", giftbox:"🎁" };
+
+  function renderBlocksOutline(){
+    var outline = document.getElementById("blocks-outline");
+    if(!outline) return;
+    outline.innerHTML = "";
+    var blocks = screens[activeScreenIndex].blocks;
+    if(blocks.length === 0){
+      outline.innerHTML = '<div class="blocks-outline-empty">Экран пуст — добавьте блок</div>';
+      return;
+    }
+    blocks.forEach(function(b){
+      var row = document.createElement("div");
+      row.className = "blocks-outline-item" + (b.id === selectedBlockId ? " is-selected" : "");
+      row.innerHTML = '<span class="ico">'+(BLOCK_ICONS[b.type]||"▭")+'</span><span>'+BLOCK_LABELS[b.type]+'</span><span class="grip">⠿</span>';
+      row.addEventListener("click", function(){ selectBlockId(b.id); });
+      outline.appendChild(row);
+    });
+  }
+
+  function renderCanvas(){
+    var screen = screens[activeScreenIndex];
+    canvas.innerHTML = "";
+    canvas.style.setProperty("--preview-accent", brandAccent);
+    screen.blocks.forEach(function(b){
+      var el = renderBlock(b.type, b.props);
+      el.dataset.id = b.id;
+      attachBlockHandlers(el, b.id);
+      if(b.id === selectedBlockId) el.classList.add("is-selected");
+      canvas.appendChild(el);
+    });
+    if(screenNameInput) screenNameInput.value = screen.name;
+    if(selectedBlockId && !getActiveBlock(selectedBlockId)) selectedBlockId = null;
+    renderScreensRail();
+    renderBlocksOutline();
+    renderProps();
+  }
+
+  function selectBlockId(id){
+    selectedBlockId = id;
+    canvas.querySelectorAll(".comp").forEach(function(el){ el.classList.toggle("is-selected", el.dataset.id === id); });
+    renderBlocksOutline();
+    renderProps();
+  }
+  canvas.addEventListener("click", function(){ selectBlockId(null); });
+
+  function addBlockToActiveScreen(type, props){
+    var id = "b" + (blockIdCounter++);
+    var finalProps = materializeProps(type, props);
+    screens[activeScreenIndex].blocks.push({id:id, type:type, props:finalProps});
+    renderCanvas();
+    selectBlockId(id);
+    toast(BLOCK_LABELS[type] + " добавлен на экран");
+  }
+
+  var addBlockBtn = document.getElementById("add-block-btn");
+  var blockMenu = document.getElementById("block-dropdown-menu");
+  if(addBlockBtn && blockMenu){
+    addBlockBtn.addEventListener("click", function(ev){
+      ev.stopPropagation();
+      blockMenu.hidden = !blockMenu.hidden;
+    });
+    document.addEventListener("click", function(ev){
+      if(!blockMenu.hidden && !ev.target.closest(".block-dropdown")) blockMenu.hidden = true;
+    });
+  }
+  document.querySelectorAll(".block-item").forEach(function(item){
+    item.addEventListener("click", function(){
+      addBlockToActiveScreen(item.dataset.block);
+      if(blockMenu) blockMenu.hidden = true;
+    });
+  });
+
+  if(screenNameInput){
+    screenNameInput.addEventListener("input", function(){
+      screens[activeScreenIndex].name = screenNameInput.value;
+      renderScreensRail();
+    });
+  }
+
+  /* ---------- screens sequence rail ---------- */
+  function renderScreensRail(){
+    if(!screensRail) return;
+    screensRail.innerHTML = "";
+    screens.forEach(function(s, i){
+      var chip = document.createElement("div");
+      chip.className = "screen-chip" + (i === activeScreenIndex ? " is-active" : "");
+      chip.innerHTML = '<span class="num">'+(i+1)+'</span><span class="name">'+s.name+'</span>'
+        + (screens.length > 1 ? '<button class="del" type="button" title="Удалить экран" data-idx="'+i+'">✕</button>' : "");
+      chip.addEventListener("click", function(ev){
+        if(ev.target.closest(".del")) return;
+        activeScreenIndex = i;
+        selectedBlockId = null;
+        renderCanvas();
+      });
+      var delBtn = chip.querySelector(".del");
+      if(delBtn){
+        delBtn.addEventListener("click", function(ev){
+          ev.stopPropagation();
+          if(screens.length <= 1) return;
+          screens.splice(i, 1);
+          if(activeScreenIndex >= screens.length) activeScreenIndex = screens.length - 1;
+          selectedBlockId = null;
+          renderCanvas();
+        });
+      }
+      screensRail.appendChild(chip);
+    });
+    var addBtn = document.createElement("button");
+    addBtn.type = "button";
+    addBtn.className = "screen-chip add";
+    addBtn.textContent = "+ Экран";
+    addBtn.addEventListener("click", function(){
+      var id = "scr" + (screenIdCounter++);
+      screens.push({ id:id, name:"Экран "+(screens.length+1), blocks:[], fallback:null });
+      activeScreenIndex = screens.length - 1;
+      selectedBlockId = null;
+      renderCanvas();
+      toast("Экран "+screens.length+" добавлен в последовательность");
+    });
+    screensRail.appendChild(addBtn);
+  }
+
+  /* ---------- templates (home page + editor share these) ---------- */
+  var TEMPLATES = {
+    promo: {
+      name: "Летняя распродажа",
+      blocks: [
+        {type:"banner", props:{title:"Летняя распродажа", subtitle:"Скидки до 50% — только 3 дня"}},
+        {type:"heading", props:{text:"Хиты продаж"}},
+        {type:"carousel", props:null},
+        {type:"button", props:{text:"Смотреть всё"}}
+      ]
+    },
+    onboarding: {
+      name: "Онбординг новой функции",
+      blocks: [
+        {type:"onboarding", props:{
+          title:"Персональные подборки для вас",
+          subtitle:"Теперь мы показываем товары, которые точно вам понравятся",
+          step:1, total:3, cta:"Далее", showSkip:true
+        }}
+      ]
+    },
+    wheel: {
+      name: "Колесо фортуны",
+      blocks: [
+        {type:"wheel", props:{ title:"Крути и выигрывай!", prizes:["-10%","Приз!","-20%","Ещё раз","Подарок","-5%"], cta:"Крутить" }}
+      ]
+    },
+    scratch: {
+      name: "Скретч-карта",
+      blocks: [
+        {type:"scratch", props:{ prize:"Скидка 20%", hint:"Проведите пальцем, чтобы стереть" }}
+      ]
+    },
+    giftbox: {
+      name: "Мистери-боксы",
+      blocks: [
+        {type:"giftbox", props:{ title:"Выберите подарок", prizes:["Скидка 15%","Попробуй ещё раз","Бесплатная доставка"] }}
+      ]
+    },
+    whatsnew: {
+      name: "Что нового",
+      blocks: [
+        {type:"heading", props:{text:"Новое в приложении"}},
+        {type:"image", props:null},
+        {type:"text", props:{text:"Мы обновили каталог: быстрый фильтр по размеру и цвету, сохранённые подборки и тёмная тема."}},
+        {type:"button", props:{text:"Посмотреть", action:{type:"link", link:"myapp://whatsnew"}}}
+      ]
+    },
+    leadform: {
+      name: "Форма лидогенерации",
+      blocks: [
+        {type:"banner", props:{title:"Оставьте заявку", subtitle:"Перезвоним в течение 15 минут"}},
+        {type:"form", props:{fields:["Имя","Телефон"], cta:"Отправить", successMessage:"Спасибо! Мы свяжемся с вами."}}
+      ]
+    },
+    abvariant: {
+      name: "Промо — вариант B",
+      blocks: [
+        {type:"banner", props:{title:"Успей до конца недели", subtitle:"Скидка 30% на всё"}},
+        {type:"button", props:{text:"Забрать скидку", action:{type:"link", link:"myapp://catalog"}}}
+      ]
+    },
+    seasonal: {
+      name: "Праздничный экран",
+      blocks: [
+        {type:"banner", props:{title:"С праздником!", subtitle:"Дарим скидку 25% до конца недели"}},
+        {type:"carousel", props:null},
+        {type:"button", props:{text:"К подаркам", action:{type:"link", link:"myapp://gifts"}}}
+      ]
+    },
+    blank: { name: "Новый экран", blocks: [] }
+  };
+
+  function loadTemplate(key){
+    var tpl = TEMPLATES[key] || TEMPLATES.blank;
+    screens = [{
+      id: "scr" + (screenIdCounter++),
+      name: tpl.name,
+      fallback: null,
+      blocks: tpl.blocks.map(function(b){
+        return { id: "b" + (blockIdCounter++), type: b.type, props: materializeProps(b.type, b.props) };
+      })
+    }];
+    activeScreenIndex = 0;
+    selectedBlockId = null;
+    renderCanvas();
+  }
+
+  loadTemplate("promo");
+
+  /* ---------- properties panel ---------- */
+  function renderProps(){
+    var selected = selectedBlockId ? canvas.querySelector('[data-id="'+selectedBlockId+'"]') : null;
+    if(!selected){
+      propPanel.innerHTML = '<p style="font-size:12.5px;color:var(--text-faint);">Выберите блок на экране, чтобы настроить его. Блоки можно перетаскивать, чтобы менять порядок.</p>';
+      return;
+    }
+    var block = getActiveBlock(selectedBlockId);
+    var type = block.type;
+    var html = '<div class="eyebrow">'+BLOCK_LABELS[type]+'</div>';
+    if(type === "banner"){
+      html += '<div class="field"><label>Заголовок</label><input value="'+selected.querySelector(".title").textContent+'" data-bind="title"/></div>'
+            + '<div class="field"><label>Подзаголовок</label><input value="'+selected.querySelector(".subtitle").textContent+'" data-bind="subtitle"/></div>';
+    } else if(type === "button"){
+      html += '<div class="field"><label>Текст кнопки</label><input value="'+selected.querySelector(".btn-visual").textContent+'" data-bind="btn-text"/></div>'
+            + actionFieldsHTML("btn-action", block.props.action);
+    } else if(type === "carousel"){
+      html += '<div class="field"><label>Товары</label><table class="mini-table">'
+            + '<tr><td>Кроссовки</td><td>3 990 ₽</td></tr><tr><td>Куртка</td><td>7 490 ₽</td></tr><tr><td>Рюкзак</td><td>2 290 ₽</td></tr>'
+            + '</table></div>'
+            + '<div class="field"><label>Событие при клике</label><select><option>item_tap (настроено)</option><option>Нет события</option></select></div>';
+    } else if(type === "heading" || type === "text"){
+      html += '<div class="field"><label>Текст</label><textarea data-bind="text">'+selected.textContent+'</textarea></div>';
+    } else if(type === "form"){
+      html += '<div class="field"><label>Поля формы (по одному на строку)</label><textarea data-bind="form-fields" rows="4">'+block.props.fields.join("\n")+'</textarea></div>'
+            + '<div class="field"><label>Текст кнопки</label><input data-bind="form-cta" value="'+block.props.cta+'"/></div>'
+            + '<div class="field"><label>Сообщение после отправки</label><input data-bind="form-success" value="'+block.props.successMessage+'"/></div>'
+            + '<div class="field"><label>Событие отправки</label><input value="lead_submit (настроено)" disabled/></div>';
+    } else if(type === "timer"){
+      html += '<div class="field"><label>Окончание отсчёта</label><input type="datetime-local" value="2026-08-04T00:00"/></div>';
+    } else if(type === "onboarding"){
+      var op = block.props;
+      html += '<div class="field"><label>Заголовок</label><input data-bind="ob-title" value="'+op.title+'"/></div>'
+            + '<div class="field"><label>Описание</label><textarea data-bind="ob-sub">'+op.subtitle+'</textarea></div>'
+            + '<div class="field-row">'
+            + '<div class="field"><label>Шаг</label><input type="number" min="1" data-bind="ob-step" value="'+op.step+'"/></div>'
+            + '<div class="field"><label>Всего шагов</label><input type="number" min="1" data-bind="ob-total" value="'+op.total+'"/></div>'
+            + '</div>'
+            + '<div class="field"><label>Текст кнопки «Далее»</label><input data-bind="ob-cta" value="'+op.cta+'"/></div>'
+            + '<div class="eyebrow" style="margin-top:8px;">Если нажали «Далее»</div>'
+            + actionFieldsHTML("ob-next", op.nextAction)
+            + '<div class="field"><label>Кнопка «Пропустить»</label><select data-bind="ob-skip"><option value="yes"'+(op.showSkip?' selected':'')+'>Показывать</option><option value="no"'+(!op.showSkip?' selected':'')+'>Скрыть</option></select></div>';
+      if(op.showSkip){
+        html += '<div class="eyebrow">Если нажали «Пропустить»</div>' + actionFieldsHTML("ob-skip-action", op.skipAction);
+      }
+    } else if(type === "wheel"){
+      html += '<div class="field"><label>Заголовок</label><input data-bind="wheel-title" value="'+block.props.title+'"/></div>'
+            + '<div class="field"><label>Призы (по одному на строку)</label><textarea data-bind="wheel-prizes" rows="6">'+block.props.prizes.join("\n")+'</textarea></div>'
+            + '<div class="field"><label>Текст кнопки</label><input data-bind="wheel-cta" value="'+block.props.cta+'"/></div>';
+    } else if(type === "scratch"){
+      html += '<div class="field"><label>Текст приза</label><input data-bind="scratch-prize" value="'+block.props.prize+'"/></div>'
+            + '<div class="field"><label>Подсказка</label><input data-bind="scratch-hint" value="'+block.props.hint+'"/></div>';
+    } else if(type === "giftbox"){
+      html += '<div class="field"><label>Заголовок</label><input data-bind="giftbox-title" value="'+block.props.title+'"/></div>'
+            + '<div class="field"><label>Призы по коробкам (по одному на строку)</label><textarea data-bind="giftbox-prizes" rows="4">'+block.props.prizes.join("\n")+'</textarea></div>';
+    } else {
+      html += '<p style="font-size:12.5px;color:var(--text-faint);">Свойства этого блока: без дополнительной настройки.</p>';
+    }
+    html += '<button class="btn btn-ghost btn-sm" id="remove-block">Удалить блок</button>';
+    propPanel.innerHTML = html;
+
+    var titleBind = propPanel.querySelector('input[data-bind="title"]');
+    if(titleBind) titleBind.addEventListener("input", function(){
+      block.props.title = titleBind.value;
+      var live = canvas.querySelector('[data-id="'+selectedBlockId+'"] .title');
+      if(live) live.textContent = titleBind.value;
+    });
+    var subBind = propPanel.querySelector('input[data-bind="subtitle"]');
+    if(subBind) subBind.addEventListener("input", function(){
+      block.props.subtitle = subBind.value;
+      var live = canvas.querySelector('[data-id="'+selectedBlockId+'"] .subtitle');
+      if(live) live.textContent = subBind.value;
+    });
+    var directBind = propPanel.querySelector('textarea[data-bind="text"]');
+    if(directBind) directBind.addEventListener("input", function(){
+      block.props.text = directBind.value;
+      var live = canvas.querySelector('[data-id="'+selectedBlockId+'"]');
+      if(live) live.textContent = directBind.value;
+    });
+    var btnTextBind = propPanel.querySelector('input[data-bind="btn-text"]');
+    if(btnTextBind) btnTextBind.addEventListener("input", function(){
+      block.props.text = btnTextBind.value;
+      var live = canvas.querySelector('[data-id="'+selectedBlockId+'"] .btn-visual');
+      if(live) live.textContent = btnTextBind.value;
+    });
+    if(type === "button") bindActionFields("btn-action", function(){ return getActiveBlock(selectedBlockId).props.action; });
+
+    var removeBtn = document.getElementById("remove-block");
+    if(removeBtn) removeBtn.addEventListener("click", function(){
+      var blocks = screens[activeScreenIndex].blocks;
+      var idx = blocks.findIndex(function(b){ return b.id === selectedBlockId; });
+      if(idx >= 0) blocks.splice(idx, 1);
+      selectedBlockId = null;
+      renderCanvas();
+    });
+
+    if(type === "onboarding"){
+      function refreshOnboardingDOM(){
+        var live = canvas.querySelector('[data-id="'+selectedBlockId+'"]');
+        if(live) live.innerHTML = buildOnboardingHTML(getActiveBlock(selectedBlockId).props);
+      }
+      [["ob-title","title",null], ["ob-sub","subtitle",null], ["ob-step","step",Number], ["ob-total","total",Number], ["ob-cta","cta",null]]
+        .forEach(function(spec){
+          var input = propPanel.querySelector('[data-bind="'+spec[0]+'"]');
+          if(!input) return;
+          input.addEventListener("input", function(){
+            getActiveBlock(selectedBlockId).props[spec[1]] = spec[2] ? spec[2](input.value) : input.value;
+            refreshOnboardingDOM();
+          });
+        });
+      var skipSel = propPanel.querySelector('[data-bind="ob-skip"]');
+      if(skipSel) skipSel.addEventListener("change", function(){
+        getActiveBlock(selectedBlockId).props.showSkip = skipSel.value === "yes";
+        renderCanvas();
+      });
+      bindActionFields("ob-next", function(){ return getActiveBlock(selectedBlockId).props.nextAction; });
+      if(op.showSkip) bindActionFields("ob-skip-action", function(){ return getActiveBlock(selectedBlockId).props.skipAction; });
+    } else if(type === "wheel"){
+      var wTitle = propPanel.querySelector('[data-bind="wheel-title"]');
+      if(wTitle) wTitle.addEventListener("change", function(){ block.props.title = wTitle.value; renderCanvas(); });
+      var wPrizes = propPanel.querySelector('[data-bind="wheel-prizes"]');
+      if(wPrizes) wPrizes.addEventListener("change", function(){
+        block.props.prizes = wPrizes.value.split("\n").map(function(s){ return s.trim(); }).filter(Boolean);
+        renderCanvas();
+      });
+      var wCta = propPanel.querySelector('[data-bind="wheel-cta"]');
+      if(wCta) wCta.addEventListener("change", function(){ block.props.cta = wCta.value; renderCanvas(); });
+    } else if(type === "scratch"){
+      var sPrize = propPanel.querySelector('[data-bind="scratch-prize"]');
+      if(sPrize) sPrize.addEventListener("change", function(){ block.props.prize = sPrize.value; renderCanvas(); });
+      var sHint = propPanel.querySelector('[data-bind="scratch-hint"]');
+      if(sHint) sHint.addEventListener("change", function(){ block.props.hint = sHint.value; renderCanvas(); });
+    } else if(type === "giftbox"){
+      var gTitle = propPanel.querySelector('[data-bind="giftbox-title"]');
+      if(gTitle) gTitle.addEventListener("change", function(){ block.props.title = gTitle.value; renderCanvas(); });
+      var gPrizes = propPanel.querySelector('[data-bind="giftbox-prizes"]');
+      if(gPrizes) gPrizes.addEventListener("change", function(){
+        block.props.prizes = gPrizes.value.split("\n").map(function(s){ return s.trim(); }).filter(Boolean);
+        renderCanvas();
+      });
+    } else if(type === "form"){
+      var fFields = propPanel.querySelector('[data-bind="form-fields"]');
+      if(fFields) fFields.addEventListener("change", function(){
+        block.props.fields = fFields.value.split("\n").map(function(s){ return s.trim(); }).filter(Boolean);
+        renderCanvas();
+      });
+      var fCta = propPanel.querySelector('[data-bind="form-cta"]');
+      if(fCta) fCta.addEventListener("change", function(){ block.props.cta = fCta.value; renderCanvas(); });
+      var fSuccess = propPanel.querySelector('[data-bind="form-success"]');
+      if(fSuccess) fSuccess.addEventListener("change", function(){ block.props.successMessage = fSuccess.value; renderCanvas(); });
+    }
+  }
+
+  /* ---------- editor tabs ---------- */
+  document.querySelectorAll(".tabs button").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var tabs = btn.parentElement;
+      tabs.querySelectorAll("button").forEach(function(b){ b.classList.remove("is-active"); });
+      btn.classList.add("is-active");
+      var panels = tabs.parentElement.querySelectorAll(".prop-panel");
+      panels.forEach(function(p){ p.classList.toggle("is-active", p.dataset.panel === btn.dataset.tab); });
+    });
+  });
+
+  /* ---------- brand kit ---------- */
+  var SHAPE_RADIUS = { pill: "999px", soft: "12px", sharp: "2px" };
+  var brandKit = {
+    primary: "#F2A93B",
+    secondary: "#1B8F7E",
+    background: "#101317",
+    text: "#F1F2ED",
+    shape: "pill",
+    spacing: 12,
+    headingWeight: "700",
+    guidelines: document.getElementById("bk-guidelines").value
+  };
+
+  function applyBrandKit(){
+    brandAccent = brandKit.primary;
+    [canvas, document.getElementById("journey-canvas"), document.getElementById("live-canvas")].forEach(function(c){
+      if(!c) return;
+      c.style.setProperty("--preview-accent", brandKit.primary);
+      c.style.setProperty("--preview-secondary", brandKit.secondary);
+      c.style.setProperty("--preview-radius", SHAPE_RADIUS[brandKit.shape]);
+      c.style.setProperty("--preview-gap", brandKit.spacing + "px");
+      c.style.setProperty("--preview-heading-weight", brandKit.headingWeight);
+      var frame = c.closest(".phone-frame");
+      if(frame){
+        frame.style.setProperty("--preview-bg", brandKit.background);
+        frame.style.setProperty("--preview-text", brandKit.text);
+      }
+    });
+    toast("Экран подстроен под бренд-кит");
+  }
+
+  [["bk-primary","primary"], ["bk-secondary","secondary"], ["bk-background","background"], ["bk-text","text"]].forEach(function(pair){
+    var input = document.getElementById(pair[0]);
+    var label = document.getElementById(pair[0] + "-hex");
+    input.addEventListener("input", function(){
+      brandKit[pair[1]] = input.value;
+      if(label) label.textContent = input.value.toUpperCase();
+    });
+  });
+  document.getElementById("bk-shape").addEventListener("change", function(){ brandKit.shape = this.value; });
+  document.getElementById("bk-heading-weight").addEventListener("change", function(){ brandKit.headingWeight = this.value; });
+  var bkSpacingInput = document.getElementById("bk-spacing");
+  var bkSpacingValue = document.getElementById("bk-spacing-value");
+  bkSpacingInput.addEventListener("input", function(){
+    brandKit.spacing = Number(bkSpacingInput.value);
+    bkSpacingValue.textContent = bkSpacingInput.value + "px";
+  });
+  document.getElementById("bk-guidelines").addEventListener("input", function(){ brandKit.guidelines = this.value; });
+  document.getElementById("apply-brand-btn").addEventListener("click", applyBrandKit);
+
+  function syncBrandPanelUI(){
+    document.getElementById("bk-primary").value = brandKit.primary;
+    document.getElementById("bk-primary-hex").textContent = brandKit.primary.toUpperCase();
+    document.getElementById("bk-secondary").value = brandKit.secondary;
+    document.getElementById("bk-secondary-hex").textContent = brandKit.secondary.toUpperCase();
+    document.getElementById("bk-background").value = brandKit.background;
+    document.getElementById("bk-background-hex").textContent = brandKit.background.toUpperCase();
+    document.getElementById("bk-text").value = brandKit.text;
+    document.getElementById("bk-text-hex").textContent = brandKit.text.toUpperCase();
+    document.getElementById("bk-shape").value = brandKit.shape;
+    document.getElementById("bk-heading-weight").value = brandKit.headingWeight;
+    bkSpacingInput.value = brandKit.spacing;
+    bkSpacingValue.textContent = brandKit.spacing + "px";
+    document.getElementById("bk-guidelines").value = brandKit.guidelines;
+  }
+
+  /* ---------- brand import (simulated AI extraction from Figma / brand book) ---------- */
+  var IMPORT_PRESETS = [
+    { primary:"#3D8BFF", secondary:"#FF6B4A", shape:"soft",  spacing:16, headingWeight:"700", guidelines:"Основной синий — только для кнопок и ссылок.\nАкцент используется не более чем в одном месте на экране.\nЗакругление элементов — 12px." },
+    { primary:"#7A5CFA", secondary:"#22C38E", shape:"sharp", spacing:10, headingWeight:"400", guidelines:"Фирменный фиолетовый — фон акцентных блоков.\nЗелёный — только для статусов «успех».\nЗаголовки — обычной насыщенности, без bold." }
+  ];
+  var importPresetIndex = 0;
+  var importStatus = document.getElementById("import-status");
+
+  function runImportSimulation(sourceLabel){
+    importStatus.hidden = false;
+    importStatus.classList.remove("is-done");
+    importStatus.textContent = "⏳ Анализируем " + sourceLabel + "…";
+    setTimeout(function(){
+      var preset = IMPORT_PRESETS[importPresetIndex % IMPORT_PRESETS.length];
+      importPresetIndex++;
+      brandKit.primary = preset.primary;
+      brandKit.secondary = preset.secondary;
+      brandKit.shape = preset.shape;
+      brandKit.spacing = preset.spacing;
+      brandKit.headingWeight = preset.headingWeight;
+      brandKit.guidelines = preset.guidelines;
+      syncBrandPanelUI();
+      applyBrandKit();
+      importStatus.classList.add("is-done");
+      importStatus.textContent = "✓ Импортировано и применено: 2 цвета, форма «" + (preset.shape === "soft" ? "мягкая" : preset.shape === "sharp" ? "строгая" : "pill") + "», отступы " + preset.spacing + "px";
+      toast("Бренд-кит обновлён из " + sourceLabel);
+    }, 1200);
+  }
+
+  document.getElementById("import-figma").addEventListener("click", function(){
+    runImportSimulation("Figma-файла");
+  });
+  document.getElementById("import-brandbook").addEventListener("click", function(){
+    document.getElementById("brandbook-file").click();
+  });
+  document.getElementById("brandbook-file").addEventListener("change", function(){
+    var f = this.files && this.files[0];
+    runImportSimulation(f ? ("«" + f.name + "»") : "брендбука");
+    this.value = "";
+  });
+
+  /* ---------- device toggle (decorative) ---------- */
+  document.querySelectorAll(".device-toggle button").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      btn.parentElement.querySelectorAll("button").forEach(function(b){ b.classList.remove("is-active"); });
+      btn.classList.add("is-active");
+    });
+  });
+
+  /* ---------- gate page: compatibility computation ---------- */
+  function computeGateReport(){
+    var screen = screens[activeScreenIndex];
+    var requiredTypes = Array.from(new Set(screen.blocks.map(function(b){ return b.type; })));
+    var byProfile = DEVICE_PROFILES.map(function(p){
+      var supported = CAPABILITY_MANIFEST[p.sdkVersion] || [];
+      var missing = requiredTypes.filter(function(t){ return supported.indexOf(t) === -1; });
+      return { profile:p, missing:missing, affected: missing.length > 0 };
+    });
+    var risk = byProfile.filter(function(r){ return r.affected; }).reduce(function(sum,r){ return sum + r.profile.share; }, 0);
+    return { requiredTypes:requiredTypes, byProfile:byProfile, risk:risk };
+  }
+
+  function makeCheckRow(ok, html){
+    var row = document.createElement("div");
+    row.className = "check-row";
+    row.innerHTML = '<div class="check-icon '+(ok?"ok":"warn")+'">'+(ok?"✓":"!")+'</div><div class="txt">'+html+'</div>';
+    return row;
+  }
+
+  function makeIssueRow(type, pct){
+    var row = document.createElement("div");
+    row.className = "check-row check-row-expandable";
+    var rowId = "fix-" + type;
+    row.innerHTML =
+      '<div class="check-icon warn">!</div>'
+      + '<div class="txt">'
+      +   '<div class="txt-main"><b>'+(BLOCK_LABELS[type]||type)+'</b> не поддерживается на '+pct+'% активных сессий — будет показан fallback-макет</div>'
+      +   '<button class="link-btn" type="button" data-toggle-fix="'+rowId+'">Показать решение ▾</button>'
+      +   '<div class="fix-panel" id="'+rowId+'" hidden>'
+      +     '<p>Причина: «'+(BLOCK_LABELS[type]||type)+'» — компонент, которого нет в этих версиях SDK. Пока эти '+pct+'% пользователей не обновят приложение, вместо него будет показан fallback-макет.</p>'
+      +     '<div class="fix-option"><div class="fix-option-head">Решить внутри InScreens</div><p>Настройте fallback так, чтобы он не терял ценность экрана для этих пользователей.</p><button class="btn btn-primary btn-sm" type="button" data-open-fallback="1">Настроить fallback-макет</button></div>'
+      +     '<div class="fix-option"><div class="fix-option-head">Решить со стороны пользователей</div><p>Компонент станет доступен автоматически, как только пользователь обновит приложение, — публиковать экран заново не нужно.</p></div>'
+      +   '</div>'
+      + '</div>';
+    return row;
+  }
+
+  function renderGatePage(){
+    var report = computeGateReport();
+    var riskFigure = document.querySelector(".risk-figure");
+    var descH2 = document.querySelector(".gate-summary .desc h2");
+    riskFigure.textContent = report.risk + "%";
+    riskFigure.className = "risk-figure " + (report.risk > 0 ? "warn" : "ok");
+    descH2.textContent = report.risk > 0
+      ? "активных сессий увидят fallback вместо части экрана"
+      : "активных сессий увидят экран корректно";
+
+    var tbody = document.getElementById("matrix-body");
+    tbody.innerHTML = report.byProfile.map(function(r){
+      return '<tr><td>'+r.profile.label+'</td><td class="mono">'+r.profile.share+'%</td><td>'
+        + (r.affected ? '<span class="chip chip-warn">fallback</span>' : '<span class="chip chip-live">ok</span>')
+        + '</td></tr>';
+    }).join("");
+
+    var checklist = document.getElementById("checklist-body");
+    checklist.innerHTML = "";
+    var missingTypesSet = {};
+    report.byProfile.forEach(function(r){ r.missing.forEach(function(t){ missingTypesSet[t] = true; }); });
+    var missingTypes = Object.keys(missingTypesSet);
+    if(missingTypes.length === 0){
+      checklist.appendChild(makeCheckRow(true, "Все компоненты этого экрана поддерживаются на 100% активных SDK-версий"));
+    } else {
+      missingTypes.forEach(function(t){
+        var affectedShare = report.byProfile.filter(function(r){ return r.missing.indexOf(t) !== -1; })
+          .reduce(function(s,r){ return s + r.profile.share; }, 0);
+        checklist.appendChild(makeIssueRow(t, affectedShare));
+      });
+    }
+
+    checklist.querySelectorAll("[data-toggle-fix]").forEach(function(btn){
+      btn.addEventListener("click", function(){
+        var panel = document.getElementById(btn.dataset.toggleFix);
+        var wasHidden = panel.hidden;
+        panel.hidden = !wasHidden;
+        btn.textContent = wasHidden ? "Скрыть решение ▴" : "Показать решение ▾";
+      });
+    });
+    checklist.querySelectorAll("[data-open-fallback]").forEach(function(btn){
+      btn.addEventListener("click", openFallbackModal);
+    });
+  }
+
+  /* ---------- fallback-macet modal ---------- */
+  var fallbackModal = document.getElementById("fallback-modal");
+  function openFallbackModal(){
+    var screen = screens[activeScreenIndex];
+    if(!screen.fallback) screen.fallback = defaultFallback(screen);
+    document.getElementById("fb-title").value = screen.fallback.title;
+    document.getElementById("fb-subtitle").value = screen.fallback.subtitle;
+    document.getElementById("fb-text").value = screen.fallback.text;
+    document.getElementById("fb-cta").value = screen.fallback.cta;
+    fallbackModal.hidden = false;
+  }
+  document.getElementById("fb-cancel").addEventListener("click", function(){ fallbackModal.hidden = true; });
+  document.getElementById("fb-save").addEventListener("click", function(){
+    screens[activeScreenIndex].fallback = {
+      title: document.getElementById("fb-title").value,
+      subtitle: document.getElementById("fb-subtitle").value,
+      text: document.getElementById("fb-text").value,
+      cta: document.getElementById("fb-cta").value
+    };
+    fallbackModal.hidden = true;
+    toast("Fallback-макет обновлён");
+    renderJourney();
+  });
+
+  /* ---------- gate page: customer journey ---------- */
+  var journeyStepsBar = document.getElementById("journey-steps");
+  var journeyCanvas = document.getElementById("journey-canvas");
+  var journeyStatus = document.getElementById("journey-status");
+  var journeyStep = 0;
+  var currentProfile = "current";
+
+  // Step labels need to describe whatever is actually on the screen being
+  // shown — a fixed "Нажал «Смотреть всё» / Перешёл в каталог" only made
+  // sense for the original promo example and was misleading for any other.
+  function primaryInteractionLabel(screen){
+    var b;
+    if((b = screen.blocks.find(function(x){ return x.type === "wheel"; }))) return "Крутил «"+(b.props.cta||"колесо")+"»";
+    if((b = screen.blocks.find(function(x){ return x.type === "scratch"; }))) return "Стирал карту";
+    if((b = screen.blocks.find(function(x){ return x.type === "giftbox"; }))) return "Выбирал коробку";
+    if((b = screen.blocks.find(function(x){ return x.type === "onboarding"; }))) return "Нажал «"+(b.props.cta||"Далее")+"»";
+    if((b = screen.blocks.find(function(x){ return x.type === "form"; }))) return "Заполнил форму";
+    if((b = screen.blocks.find(function(x){ return x.type === "button"; }))) return "Нажал «"+((b.props && b.props.text) || "кнопку")+"»";
+    return "Просмотрел экран";
+  }
+
+  function outcomeLabel(screen){
+    var b;
+    if((b = screen.blocks.find(function(x){ return x.type === "button"; }))){
+      return "Действие: " + (actionSummary(b.props.action) || "не задано");
+    }
+    if((b = screen.blocks.find(function(x){ return x.type === "onboarding"; }))){
+      return "Далее: " + (actionSummary(b.props.nextAction) || "не задано");
+    }
+    if(screen.blocks.some(function(x){ return x.type === "wheel" || x.type === "scratch" || x.type === "giftbox"; })){
+      return "Увидел свой приз и вернулся к экрану";
+    }
+    return "Дошёл до конца экрана";
+  }
+
+  function makeMini(title, sub){
+    var d = document.createElement("div");
+    d.style.cssText = "display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:6px;color:var(--text-faint);";
+    d.innerHTML = '<div style="font-size:13px;font-weight:700;color:var(--text);">'+title+'</div><div style="font-size:11px;">'+sub+'</div>';
+    return d;
+  }
+
+  function currentProfileVersion(){
+    var p = DEVICE_PROFILES.find(function(x){ return x.id === currentProfile; });
+    return p ? p.sdkVersion : "2.0.0";
+  }
+
+  // Renders the REAL design of a specific screen in the sequence (by index),
+  // respecting compatibility for the selected profile — not always the one
+  // active in the editor. This is what makes the journey walk the whole
+  // sequence instead of only ever showing one screen.
+  function renderScreenInto(frag, screenIndex){
+    var screen = screens[screenIndex];
+    var supported = CAPABILITY_MANIFEST[currentProfileVersion()] || [];
+    var required = Array.from(new Set(screen.blocks.map(function(b){ return b.type; })));
+    var missing = required.filter(function(t){ return supported.indexOf(t) === -1; });
+
+    if(missing.length === 0){
+      screen.blocks.forEach(function(b){ frag.appendChild(renderBlock(b.type, b.props)); });
+    } else {
+      var fb = screen.fallback || defaultFallback(screen);
+      frag.appendChild(renderBlock("banner", {title:fb.title, subtitle:fb.subtitle}));
+      frag.appendChild(renderBlock("text", {text:fb.text}));
+      frag.appendChild(renderBlock("button", {text:fb.cta}));
+    }
+    return missing;
+  }
+
+  // One step for "opened the app", one step per screen in the sequence (in
+  // order), one step for the outcome — so adding/removing screens in the
+  // Simulator immediately changes how many steps the journey has.
+  function buildJourneySteps(){
+    var steps = [{ kind:"intro", label:"Открыл приложение" }];
+    screens.forEach(function(s, i){
+      steps.push({ kind:"screen", label: s.name || ("Экран "+(i+1)), screenIndex: i });
+    });
+    steps.push({ kind:"outcome", label:"Результат" });
+    return steps;
+  }
+
+  function renderJourney(){
+    var stepsDef = buildJourneySteps();
+    if(journeyStep > stepsDef.length - 1) journeyStep = stepsDef.length - 1;
+    if(journeyStep < 0) journeyStep = 0;
+    var def = stepsDef[journeyStep];
+
+    journeyStepsBar.innerHTML = "";
+    stepsDef.forEach(function(d, i){
+      var el = document.createElement("div");
+      el.className = "journey-step" + (i === journeyStep ? " is-current" : "") + (i < journeyStep ? " is-done" : "");
+      el.innerHTML = '<div class="dot">'+(i < journeyStep ? "✓" : (i+1))+'</div><div class="lbl">'+escapeHtml(d.label)+'</div>';
+      el.addEventListener("click", function(){ journeyStep = i; renderJourney(); });
+      journeyStepsBar.appendChild(el);
+    });
+
+    journeyCanvas.innerHTML = "";
+    journeyCanvas.style.setProperty("--preview-accent", brandAccent);
+    var frag = document.createDocumentFragment();
+    if(def.kind === "intro"){
+      frag.appendChild(makeMini("Ваше приложение", "Главный экран", true));
+    } else if(def.kind === "screen"){
+      renderScreenInto(frag, def.screenIndex);
+    } else {
+      frag.appendChild(makeMini("Результат", outcomeLabel(screens[screens.length - 1]), true));
+    }
+    journeyCanvas.appendChild(frag);
+
+    document.getElementById("journey-back").disabled = journeyStep === 0;
+    document.getElementById("journey-next").disabled = journeyStep === stepsDef.length - 1;
+
+    if(def.kind === "screen"){
+      var screen = screens[def.screenIndex];
+      var supported = CAPABILITY_MANIFEST[currentProfileVersion()] || [];
+      var required = Array.from(new Set(screen.blocks.map(function(b){ return b.type; })));
+      var missing = required.filter(function(t){ return supported.indexOf(t) === -1; });
+      var base = missing.length === 0
+        ? "✓ «"+screen.name+"» — рендер актуальный."
+        : "⚠ «"+screen.name+"» — показан fallback: "+missing.map(function(t){ return BLOCK_LABELS[t]||t; }).join(", ")+" не поддерживается на этом SDK.";
+      journeyStatus.textContent = base + " Действие: " + primaryInteractionLabel(screen) + ".";
+    } else {
+      journeyStatus.textContent = "Шаг вне зоны рендера экрана.";
+    }
+  }
+
+  document.getElementById("journey-next").addEventListener("click", function(){
+    if(journeyStep < screens.length + 1){ journeyStep++; renderJourney(); }
+  });
+  document.getElementById("journey-back").addEventListener("click", function(){
+    if(journeyStep > 0){ journeyStep--; renderJourney(); }
+  });
+  document.querySelectorAll("[data-profile]").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      document.querySelectorAll("[data-profile]").forEach(function(b){ b.classList.remove("is-active"); });
+      btn.classList.add("is-active");
+      currentProfile = btn.dataset.profile;
+      renderJourney();
+    });
+  });
+
+  /* ---------- publish page (unchanged) ---------- */
+  var liveCanvas = document.getElementById("live-canvas");
+  renderScreenIntoStatic(liveCanvas);
+  function renderScreenIntoStatic(container){
+    container.appendChild(renderBlock("banner", {title:"Летняя распродажа", subtitle:"Скидки до 50% — только 3 дня"}));
+    container.appendChild(renderBlock("heading", {text:"Хиты продаж"}));
+    container.appendChild(renderBlock("carousel"));
+    container.appendChild(renderBlock("button", {text:"Смотреть всё"}));
+  }
+
+  var rolloutRange = document.getElementById("rollout-range");
+  var rolloutValue = document.getElementById("rollout-value");
+  rolloutRange.addEventListener("input", function(){ rolloutValue.textContent = rolloutRange.value + "%"; });
+
+  document.getElementById("publish-btn").addEventListener("click", function(){
+    document.getElementById("publish-version").textContent = "v2 · опубликован";
+    document.getElementById("v2-row").style.display = "flex";
+    document.getElementById("live-ts").textContent = "Обновлено: только что";
+    toast("Опубликовано как v2 · раскатка " + rolloutRange.value + "%");
+  });
+
+  /* ---------- client page: screen funnel / abandonment ---------- */
+  // Illustrative retention curve applied against the real screens sequence —
+  // so adding/removing screens in the Simulator changes the funnel shown here,
+  // the same way it now changes the Gate-отчёт journey.
+  var FUNNEL_RETENTION = [1, 0.68, 0.79, 0.83, 0.86, 0.88];
+
+  function computeFunnelCounts(){
+    var base = 18420; // ties to the "Показы" KPI already on this page
+    var counts = [];
+    var running = base;
+    screens.forEach(function(s, i){
+      if(i === 0){ counts.push(running); }
+      else {
+        running = Math.round(running * FUNNEL_RETENTION[Math.min(i, FUNNEL_RETENTION.length - 1)]);
+        counts.push(running);
+      }
+    });
+    return counts;
+  }
+
+  function renderFunnel(){
+    var body = document.getElementById("funnel-body");
+    var summary = document.getElementById("funnel-summary");
+    if(!body || !summary) return;
+    var counts = computeFunnelCounts();
+    var base = counts[0];
+    body.innerHTML = "";
+
+    screens.forEach(function(s, i){
+      var pct = Math.round((counts[i] / base) * 100);
+      var row = document.createElement("div");
+      row.className = "funnel-row";
+      row.innerHTML =
+        '<div class="funnel-label">'+(i+1)+'. '+escapeHtml(s.name || ("Экран "+(i+1)))+'</div>'
+        + '<div class="funnel-bar-wrap"><div class="funnel-bar" style="width:'+pct+'%"></div></div>'
+        + '<div class="funnel-count">'+counts[i].toLocaleString("ru-RU")+' <span class="funnel-pct">· '+pct+'%</span></div>';
+      body.appendChild(row);
+
+      if(i < screens.length - 1){
+        var dropped = counts[i] - counts[i+1];
+        var dropPct = Math.round((dropped / counts[i]) * 100);
+        var dropRow = document.createElement("div");
+        dropRow.className = "funnel-drop";
+        dropRow.textContent = "↓ ушли на этом шаге: " + dropped.toLocaleString("ru-RU") + " · " + dropPct + "%";
+        body.appendChild(dropRow);
+      }
+    });
+
+    if(screens.length > 1){
+      var totalDropped = counts[0] - counts[counts.length - 1];
+      var totalDropPct = Math.round((totalDropped / counts[0]) * 100);
+      summary.textContent = "Общий abandonment rate по воронке: " + totalDropPct + "% — "
+        + totalDropped.toLocaleString("ru-RU") + " пользователей не дошли до экрана «" + screens[screens.length-1].name + "».";
+    } else {
+      summary.textContent = "В последовательности пока один экран — воронка появится, когда вы добавите следующий шаг в Симуляторе.";
+    }
+  }
+
+  /* ---------- client page: collected leads (from the lead-gen "form" block) ---------- */
+  var MOCK_LEAD_VALUES = {
+    "имя": ["Анна Смирнова","Дмитрий Кузнецов","Мария Иванова","Сергей Попов","Елена Соколова","Игорь Волков"],
+    "телефон": ["+7 900 123-45-67","+7 916 234-56-78","+7 903 345-67-89","+7 926 456-78-90","+7 985 567-89-01","+7 911 678-90-12"],
+    "e-mail": ["anna@mail.ru","dmitry@yandex.ru","maria@gmail.com","sergey@mail.ru","elena@yandex.ru","igor@mail.ru"],
+    "email": ["anna@mail.ru","dmitry@yandex.ru","maria@gmail.com","sergey@mail.ru","elena@yandex.ru","igor@mail.ru"]
+  };
+
+  function mockValueFor(field, i){
+    var key = Object.keys(MOCK_LEAD_VALUES).find(function(k){ return field.toLowerCase().indexOf(k) !== -1; });
+    return key ? MOCK_LEAD_VALUES[key][i % MOCK_LEAD_VALUES[key].length] : (field + " " + (i+1));
+  }
+
+  var seedLeadsCache = null;
+  function getSeedLeads(fields){
+    var key = fields.join("|");
+    if(!seedLeadsCache || seedLeadsCache.key !== key){
+      var out = [];
+      for(var i=0;i<6;i++){
+        var lead = {};
+        fields.forEach(function(f){ lead[f] = mockValueFor(f, i); });
+        lead._ts = new Date(Date.now() - (3 + i*5) * 3600 * 1000);
+        lead._captured = false;
+        out.push(lead);
+      }
+      seedLeadsCache = { key: key, leads: out };
+    }
+    return seedLeadsCache.leads;
+  }
+
+  function findLeadFormScreen(){
+    for (var i=0; i<screens.length; i++){
+      var b = screens[i].blocks.find(function(x){ return x.type === "form"; });
+      if(b) return b;
+    }
+    return null;
+  }
+
+  function formatLeadTime(ts){
+    var hours = Math.round((Date.now() - ts.getTime()) / 3600000);
+    if(hours < 1) return "только что";
+    if(hours < 24) return hours + " ч назад";
+    return Math.round(hours/24) + " дн назад";
+  }
+
+  function renderLeadsSection(){
+    var body = document.getElementById("leads-body");
+    var empty = document.getElementById("leads-empty");
+    var countEl = document.getElementById("leads-count");
+    var exportBtn = document.getElementById("leads-export");
+    if(!body) return;
+
+    var formBlock = findLeadFormScreen();
+    if(!formBlock){
+      body.innerHTML = "";
+      empty.hidden = false;
+      countEl.textContent = "";
+      exportBtn.disabled = true;
+      return;
+    }
+    empty.hidden = true;
+    exportBtn.disabled = false;
+
+    var fields = formBlock.props.fields;
+    var allLeads = capturedLeads.concat(getSeedLeads(fields));
+    countEl.textContent = "· " + allLeads.length;
+
+    body.innerHTML = "";
+    var head = document.createElement("div");
+    head.className = "leads-row leads-head";
+    head.innerHTML = fields.map(function(f){ return "<div>"+escapeHtml(f)+"</div>"; }).join("") + "<div>Когда</div>";
+    body.appendChild(head);
+
+    allLeads.forEach(function(lead){
+      var row = document.createElement("div");
+      row.className = "leads-row" + (lead._captured ? " is-captured" : "");
+      row.innerHTML = fields.map(function(f, i){
+        var badge = (lead._captured && i === 0) ? '<span class="leads-live-badge">новый</span>' : "";
+        return "<div>"+badge+escapeHtml(lead[f]||"—")+"</div>";
+      }).join("") + '<div class="leads-time">'+formatLeadTime(lead._ts)+'</div>';
+      body.appendChild(row);
+    });
+  }
+
+  document.getElementById("leads-export").addEventListener("click", function(){
+    var formBlock = findLeadFormScreen();
+    if(!formBlock) return;
+    var fields = formBlock.props.fields;
+    var allLeads = capturedLeads.concat(getSeedLeads(fields));
+    var rows = [fields.concat(["Когда"])];
+    allLeads.forEach(function(lead){
+      rows.push(fields.map(function(f){ return lead[f] || ""; }).concat([formatLeadTime(lead._ts)]));
+    });
+    var csv = rows.map(function(r){
+      return r.map(function(v){ return '"' + String(v).replace(/"/g, '""') + '"'; }).join(",");
+    }).join("\r\n");
+    var blob = new Blob(["﻿" + csv], { type: "text/csv;charset=utf-8;" });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement("a");
+    a.href = url;
+    a.download = "leads.csv";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  });
+
+  /* ---------- initial paint ---------- */
+  document.querySelector('[data-profile="current"]').classList.add("is-active");
+  renderJourney();
+  renderGatePage();
+  renderFunnel();
+  renderLeadsSection();
+  showPage((location.hash || "#home").slice(1));
+})();
+</script>

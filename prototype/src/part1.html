@@ -1,0 +1,73 @@
+<title>InScreens — интерактивный прототип</title>
+<style>
+/* ============================================================
+   InScreens — clickable product prototype
+   Palette: paper (eucalyptus-grey) / ink / beacon amber / signal teal / alert coral
+   Type: Unbounded (display, sparingly) + Golos Text (UI/body) + system mono (data)
+   ============================================================ */
+
+:root{
+  --ink:#15181C;
+  --paper:#EDF0E9;
+  --surface:#FFFFFF;
+  --surface-2:#E2E6DC;
+  --line:#D5D9CD;
+  --text:#15181C;
+  --text-muted:#5B6058;
+  --text-faint:#868C81;
+  --brand:#F2A93B;
+  --brand-strong:#D98E22;
+  --brand-ink:#3D2705;
+  --signal:#1B8F7E;
+  --signal-soft:#DBEEE9;
+  --signal-ink:#0E3A33;
+  --alert:#C24B3A;
+  --alert-soft:#F7E1DC;
+  --alert-ink:#4A1B14;
+  --shadow: 0 1px 2px rgba(21,24,28,0.06), 0 8px 24px -12px rgba(21,24,28,0.18);
+  --radius-s:8px;
+  --radius-m:14px;
+  --radius-l:20px;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark){
+  :root{
+    --ink:#F1F2ED;
+    --paper:#101317;
+    --surface:#171B20;
+    --surface-2:#1E232A;
+    --line:#2B3138;
+    --text:#F1F2ED;
+    --text-muted:#9AA1A8;
+    --text-faint:#6B7178;
+    --brand:#F6BB57;
+    --brand-strong:#F2A93B;
+    --brand-ink:#2A1A02;
+    --signal:#3FCBB2;
+    --signal-soft:rgba(63,203,178,0.14);
+    --signal-ink:#BEF0E4;
+    --alert:#FF8770;
+    --alert-soft:rgba(255,135,112,0.14);
+    --alert-ink:#FFD9CF;
+    --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 12px 28px -14px rgba(0,0,0,0.55);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#F1F2ED; --paper:#101317; --surface:#171B20; --surface-2:#1E232A; --line:#2B3138;
+  --text:#F1F2ED; --text-muted:#9AA1A8; --text-faint:#6B7178;
+  --brand:#F6BB57; --brand-strong:#F2A93B; --brand-ink:#2A1A02;
+  --signal:#3FCBB2; --signal-soft:rgba(63,203,178,0.14); --signal-ink:#BEF0E4;
+  --alert:#FF8770; --alert-soft:rgba(255,135,112,0.14); --alert-ink:#FFD9CF;
+  color-scheme: dark;
+}
+:root[data-theme="light"]{
+  --ink:#15181C; --paper:#EDF0E9; --surface:#FFFFFF; --surface-2:#E2E6DC; --line:#D5D9CD;
+  --text:#15181C; --text-muted:#5B6058; --text-faint:#868C81;
+  --brand:#F2A93B; --brand-strong:#D98E22; --brand-ink:#3D2705;
+  --signal:#1B8F7E; --signal-soft:#DBEEE9; --signal-ink:#0E3A33;
+  --alert:#C24B3A; --alert-soft:#F7E1DC; --alert-ink:#4A1B14;
+  color-scheme: light;
+}
+

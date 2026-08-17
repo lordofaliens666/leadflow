@@ -1,0 +1,29 @@
+/* Top nav shared by the dashboard and test-client pages, so the two feel
+   like one app rather than two disconnected static folders. */
+.app-nav {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 10px 20px;
+  background: #0b0e16;
+  border-bottom: 1px solid #1f2740;
+  font-size: 13px;
+}
+.app-nav .brand {
+  font-weight: 700;
+  color: #e8ecf4;
+  margin-right: 6px;
+}
+.app-nav a {
+  color: #8a93ad;
+  text-decoration: none;
+  padding: 4px 2px;
+  border-bottom: 2px solid transparent;
+}
+.app-nav a:hover {
+  color: #cfd6e8;
+}
+.app-nav a.active {
+  color: #7ecac0;
+  border-bottom-color: #4ab8a0;
+}

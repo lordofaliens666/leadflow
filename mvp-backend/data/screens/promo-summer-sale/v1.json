@@ -1,0 +1,77 @@
+{
+  "id": "promo-summer-sale",
+  "title": "Летняя распродажа",
+  "components": [
+    {
+      "id": "c1",
+      "type": "banner",
+      "props": {
+        "title": "Летняя распродажа",
+        "subtitle": "Скидки до 50% — только 3 дня",
+        "tone": "coral"
+      }
+    },
+    {
+      "id": "c2",
+      "type": "heading",
+      "props": {
+        "text": "Хиты продаж"
+      }
+    },
+    {
+      "id": "c3",
+      "type": "carousel-v2",
+      "props": {
+        "items": [
+          {
+            "label": "Кроссовки",
+            "price": "3 990 ₽"
+          },
+          {
+            "label": "Куртка",
+            "price": "7 490 ₽"
+          },
+          {
+            "label": "Рюкзак",
+            "price": "2 290 ₽"
+          }
+        ]
+      }
+    },
+    {
+      "id": "c4",
+      "type": "button",
+      "props": {
+        "text": "Смотреть всё",
+        "style": "primary"
+      }
+    }
+  ],
+  "fallback": [
+    {
+      "id": "f1",
+      "type": "banner",
+      "props": {
+        "title": "Летняя распродажа",
+        "subtitle": "Скидки до 50% — только 3 дня",
+        "tone": "coral"
+      }
+    },
+    {
+      "id": "f2",
+      "type": "text",
+      "props": {
+        "text": "Смотрите новинки и скидки в приложении."
+      }
+    },
+    {
+      "id": "f3",
+      "type": "button",
+      "props": {
+        "text": "Смотреть всё",
+        "style": "primary"
+      }
+    }
+  ],
+  "version": 1
+}

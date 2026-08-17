@@ -1,0 +1,27 @@
+{
+  "profiles": [
+    {
+      "id": "legacy",
+      "label": "SDK 1.0.0 — legacy",
+      "sdkVersion": "1.0.0",
+      "userSharePercent": 14
+    },
+    {
+      "id": "stable",
+      "label": "SDK 1.2.0 — stable",
+      "sdkVersion": "1.2.0",
+      "userSharePercent": 30
+    },
+    {
+      "id": "current",
+      "label": "SDK 2.0.0 — current",
+      "sdkVersion": "2.0.0",
+      "userSharePercent": 56
+    }
+  ],
+  "capabilities": {
+    "1.0.0": ["banner", "heading", "text", "image", "button", "spacer"],
+    "1.2.0": ["banner", "heading", "text", "image", "button", "spacer", "carousel-v2"],
+    "2.0.0": ["banner", "heading", "text", "image", "button", "spacer", "carousel-v2"]
+  }
+}

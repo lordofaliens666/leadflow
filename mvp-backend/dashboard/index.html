@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>InScreens — Dashboard</title>
+<link rel="stylesheet" href="/shared/nav.css" />
+<link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+<nav class="app-nav">
+  <span class="brand">InScreens</span>
+  <a class="active" href="/dashboard/">Dashboard</a>
+  <a href="/test-client/">Test client</a>
+</nav>
+<header>
+  <h1>Dashboard <span class="tag">web prototype</span></h1>
+  <p class="subtitle">Create a screen → run it through the simulator → check the compatibility gate → publish.</p>
+</header>
+
+<main>
+  <section class="panel">
+    <h2>1 · Screen schema</h2>
+    <textarea id="schema-input" spellcheck="false"></textarea>
+    <div id="schema-error" class="error"></div>
+  </section>
+
+  <section class="panel">
+    <h2>2 · Pre-publish simulator</h2>
+    <p class="hint">Renders this exact schema through the shared render engine, once per synthetic device profile.</p>
+    <button id="run-simulator" disabled>Run simulator</button>
+    <div id="simulator-status" class="status"></div>
+    <div id="simulator-grid" class="simulator-grid"></div>
+  </section>
+
+  <section class="panel">
+    <h2>3 · Compatibility gate</h2>
+    <button id="check-gate" disabled>Check gate</button>
+    <div id="gate-report"></div>
+  </section>
+
+  <section class="panel">
+    <h2>4 · Publish</h2>
+    <button id="publish" class="primary" disabled>Publish screen</button>
+    <div id="publish-result"></div>
+  </section>
+
+  <section class="panel">
+    <h2>Published screens</h2>
+    <ul id="screens-list"></ul>
+  </section>
+</main>
+
+<script type="module" src="dashboard.js"></script>
+</body>
+</html>

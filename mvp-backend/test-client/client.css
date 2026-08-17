@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background: #05070c;
+}
+header {
+  width: 100%;
+  max-width: 420px;
+  padding: 20px 20px 0;
+  box-sizing: border-box;
+}
+h1 {
+  font-size: 17px;
+  margin: 0 0 12px;
+}
+.tag {
+  font-size: 11px;
+  font-weight: 400;
+  color: #7ecac0;
+  border: 1px solid #2a5a50;
+  border-radius: 999px;
+  padding: 2px 8px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+.controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+select, button {
+  background: #1c2436;
+  color: #e8ecf4;
+  border: 1px solid #313d56;
+  border-radius: 8px;
+  padding: 7px 10px;
+  font-size: 12.5px;
+}
+button {
+  cursor: pointer;
+}
+.diagnostics {
+  margin-top: 10px;
+  font-size: 12px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: #131a2a;
+  border: 1px solid #1f2740;
+  min-height: 14px;
+}
+main {
+  padding: 24px;
+}
+.phone-frame {
+  width: 340px;
+  min-height: 600px;
+  border-radius: 28px;
+  border: 6px solid #1c2436;
+  background: #0f1420;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+.phone-frame #screen-root {
+  min-height: 588px;
+}
+.empty {
+  padding: 16px;
+  font-size: 13px;
+  opacity: 0.6;
+}

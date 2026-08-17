@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="/shared/components.css" />
+<style>
+  html, body { background: transparent; }
+  #screen-root { padding: 10px; gap: 8px; }
+  .comp-banner { padding: 12px 10px; }
+  .banner-title { font-size: 14px; }
+  .banner-subtitle { font-size: 10px; }
+  .comp-heading { font-size: 13px; }
+  .comp-text { font-size: 11px; }
+  .comp-image { height: 40px; }
+  .comp-button { padding: 6px 12px; font-size: 11px; }
+  .carousel-card { min-width: 70px; padding: 8px; }
+  .carousel-item-label { font-size: 10px; }
+  .carousel-item-price { font-size: 9px; }
+</style>
+</head>
+<body>
+<div id="screen-root"></div>
+<script type="module">
+  import { renderScreen } from '/shared/renderer.js';
+
+  window.addEventListener('message', (event) => {
+    const { type, schema, supportedTypes, profileId } = event.data || {};
+    if (type !== 'render') return;
+    const result = renderScreen(document.getElementById('screen-root'), schema, supportedTypes);
+    parent.postMessage({ type: 'render-result', profileId, result }, '*');
+  });
+
+  // Signal readiness so the parent knows it's safe to postMessage.
+  parent.postMessage({ type: 'frame-ready' }, '*');
+</script>
+</body>
+</html>
